@@ -10,8 +10,9 @@ using System.Collections.Generic;
 public class Goal_Judge : MonoBehaviour
 {
     // オブジェクトタグが「　Player　」なら処理続行
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter2D(Collider2D col)
     {
+       
         if(col.gameObject.tag == "Player")
         {
             // デバッグログに表示される
