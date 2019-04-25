@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class Change_Tiitle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Change_Tiitle : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject image_object;     //UIの取得
     public Image image_component;       //UIの色とか変えるやつ
