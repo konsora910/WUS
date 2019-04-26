@@ -26,14 +26,14 @@ public class Sticking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // コライダーから「トリガー」を取得できるか判断する
+    /*    // コライダーから「トリガー」を取得できるか判断する
         if (mode == Mode.collision)
         {
-           // GetComponentInChildren<Collider>().isTrigger = false;
+            GetComponentInChildren<Collider>().isTrigger = false;
         }else if (mode == Mode.trigger)
         {
             GetComponentInChildren<Collider>().isTrigger = true;
-        }
+        }*/
     }
 
     // 衝突したと判断したら呼ばれる
