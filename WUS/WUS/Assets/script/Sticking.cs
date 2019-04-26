@@ -29,7 +29,7 @@ public class Sticking : MonoBehaviour
         // コライダーから「トリガー」を取得できるか判断する
         if (mode == Mode.collision)
         {
-            GetComponentInChildren<Collider>().isTrigger = false;
+           // GetComponentInChildren<Collider>().isTrigger = false;
         }else if (mode == Mode.trigger)
         {
             GetComponentInChildren<Collider>().isTrigger = true;
