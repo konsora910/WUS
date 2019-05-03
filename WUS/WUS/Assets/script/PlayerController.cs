@@ -6,17 +6,18 @@ public class PlayerController : MonoBehaviour
 {
     // 変数
   //  public float speed;
-    public float rotation;
-    public string type;
+  //  public float rotation;
+  //  public string type;
 
-    public GameObject playerPrefab;
-    public GameObject starPrefab;
-    public GameObject StopObject; // 止めるオブジェクト
+   public GameObject playerPrefab;
+  // public GameObject starPrefab;
+  // public GameObject StopObject; // 止めるオブジェクト
     Collision col;
     public float PositionX;
     Rigidbody2D rigid;
     private float speed;
-    bool bHit = false;
+   public bool bHit = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +31,13 @@ public class PlayerController : MonoBehaviour
     {
         if(!bHit)
         {
-            playerPrefab.transform.position += new Vector3(0.01f, 0f, 0f);
+            playerPrefab.transform.position += new Vector3(PositionX, 0f, 0f);
 
 
+        }
+        if(bHit)
+        {
+            playerPrefab.transform.position -= new Vector3(PositionX, 0f, 0f);
         }
      //   if (!bHit)
      //   {
