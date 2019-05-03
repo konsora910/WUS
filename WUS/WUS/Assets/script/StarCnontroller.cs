@@ -14,6 +14,8 @@ public class StarCnontroller : MonoBehaviour
     float gaugeLength = 0f;
     bool shotGaugeSet = false;
 
+    public bool bUse = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,29 +38,37 @@ public class StarCnontroller : MonoBehaviour
             shotGaugeSet = true;
         }
 
-        // マウスを離した地点の座標から、発射方向を計算
-        if (Input.GetMouseButtonUp(0))
+        if (bUse)
         {
-            Vector2 endPos = Input.mousePosition;
-            Vector2 startDirection = -1 * (endPos - startPos).normalized;
-            this.rigid.AddForce(startDirection * speed);
-            shotGaugeSet = false;
-            Debug.Log(speed);
-            // this.rigid.useGravity = true;
-            this.rigid.constraints = RigidbodyConstraints2D.None;
 
+            // マウスを離した地点の座標から、発射方向を計算
+            if (Input.GetMouseButtonUp(0))
+            {
+                Vector2 endPos = Input.mousePosition;
+                Vector2 startDirection = -1 * (endPos - startPos).normalized;
+                this.rigid.AddForce(startDirection * speed);
+                shotGaugeSet = false;
+                Debug.Log(speed);
+                // this.rigid.useGravity = true;
+                this.rigid.constraints = RigidbodyConstraints2D.None;
+
+            }
+
+            // マウスが押されている間 ショットゲージを呼ぶ
+            if (shotGaugeSet)
+            {
+                shotGaugeValue();
+            }
+
+            // テスト用：スペースキー押下で停止
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                this.rigid.velocity *= 0;
+            }
         }
-
-        // マウスが押されている間 ショットゲージを呼ぶ
-        if (shotGaugeSet)
+        else
         {
-            shotGaugeValue();
-        }
-
-        // テスト用：スペースキー押下で停止
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            this.rigid.velocity *= 0;
+            gaugeLength = 0;
         }
 
     }
@@ -71,7 +81,7 @@ public class StarCnontroller : MonoBehaviour
     // ショットゲージ関数
     void shotGaugeValue()
     {
-        Debug.Log("呼び出し確認");
+       // Debug.Log("呼び出し確認");
         
             gaugeLength += 0.025f;
             //ゲージがMaxでゼロに戻る
