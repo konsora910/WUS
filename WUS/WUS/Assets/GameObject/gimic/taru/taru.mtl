@@ -1,0 +1,19 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.193236683)
+
+newmtl taru
+kd 0.8 0.8 0.8
+illum 1
+
+newmtl mat
+kd 0.8 0.8 0.8
+illum 1
+
+newmtl mat.002
+kd 0.8 0.8 0.8
+illum 1
+
+newmtl mat.001
+kd 0.8 0.8 0.8
+illum 1
+
