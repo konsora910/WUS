@@ -58,7 +58,7 @@ public class CheckPoint : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!isCheck)
+        if(collision.gameObject.tag == "Player")
         {
             JudgeCheck(collision.collider);
             StopCamera = true;
@@ -81,7 +81,7 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isCheck)
+        if(collision.gameObject.tag == "Player")
         {
             JudgeCheck(collision);
         }
