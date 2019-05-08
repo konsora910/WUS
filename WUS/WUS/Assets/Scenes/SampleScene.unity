@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 178549c4a2145ac4d9cff8370326e0e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.24
+      value: 6.94
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 178549c4a2145ac4d9cff8370326e0e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1154,6 +1154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319b63f242b115f4aa686369786db954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Move1: 8
+  Move2: 8
 --- !u!1001 &676043293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4795,9 +4797,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bc3682bc9cda640b573766ebeaa3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: 0
-  type: 
   playerPrefab: {fileID: 6946165271308472712}
-  starPrefab: {fileID: 0}
-  StopObject: {fileID: 1932151045}
   PositionX: 0.025
+  bHit: 0
