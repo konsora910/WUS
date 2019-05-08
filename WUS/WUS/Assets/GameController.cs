@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
+    public GameObject option;
+    public GameObject Sceneobject;
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
     void Quit()
     {
+      option.gameObject.SetActive(true);
+      Sceneobject.gameObject.SetActive(false);
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+
+
 #elif UNITY_STANDALONE
     UnityEngine.Application.Quit();
 #endif
@@ -21,5 +26,25 @@ public class GameController : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape)) Quit();
+
+
+    }
+
+    public void TitleScene()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
+    public void MenuScene()
+    {
+       // SceneManager.LoadScene("TitleScene");
+    }
+    public void GameFinish()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+    public void Cancel()
+    {
+        option.gameObject.SetActive(false);
+        Sceneobject.gameObject.SetActive(true);
     }
 }
