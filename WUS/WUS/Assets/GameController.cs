@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
     }
     public void MenuScene()
     {
-       // SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene("MenuScene");
     }
     public void GameFinish()
     {
@@ -46,5 +46,29 @@ public class GameController : MonoBehaviour
     {
         option.gameObject.SetActive(false);
         Sceneobject.gameObject.SetActive(true);
+    }
+    public void tutorial()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void stage1()
+    {
+
+    }
+    public void stage2()
+    {
+
+    }
+    public void stage3()
+    {
+
+    }
+    public void stage4()
+    {
+
+    }
+    public void stage5()
+    {
+
     }
 }

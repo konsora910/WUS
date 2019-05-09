@@ -27,7 +27,7 @@ public class Change_Tiitle : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     //　マウスがUIをクリックしたら
     public void OnPointerClick(PointerEventData pointerData)
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MenuScene");
     }
 
     // マウスがUIと重なったら
