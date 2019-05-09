@@ -51,24 +51,4 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
-    public void stage1()
-    {
-
-    }
-    public void stage2()
-    {
-
-    }
-    public void stage3()
-    {
-
-    }
-    public void stage4()
-    {
-
-    }
-    public void stage5()
-    {
-
-    }
 }
