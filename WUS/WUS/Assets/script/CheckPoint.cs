@@ -12,7 +12,8 @@ public class CheckPoint : MonoBehaviour
     };
     public float Move1;
     public float Move2;
-    private float stMove;
+    private float tX = 0.5f;
+    private float stMove = 0.0f;
     private Mode mode;
     private bool isCheck;
     private int nCheck = 0;
@@ -32,10 +33,10 @@ public class CheckPoint : MonoBehaviour
         switch (nCheck)
         {
             case 0:
-                stMove = Move1;
+                stMove += Move1;
                 break;
             case 1:
-                stMove = Move2;
+                stMove += Move2;
                 break;
             default:
                 break;
@@ -46,7 +47,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (StopCamera)
         {
-            Camera.main.gameObject.transform.position += new Vector3(0.5f, 0.0f, 0.0f);
+            Camera.main.gameObject.transform.Translate(tX, 0.0f, 0.0f);
             if (Camera.main.gameObject.transform.position.x >= stMove)
             {
                 StopCamera = false;
@@ -66,18 +67,6 @@ public class CheckPoint : MonoBehaviour
             Debug.Log("Collision : CheckPoint");
         }
     }
-
-    //private void CameraMoveOrder()
-    //{
-    //    if (!StopCamera)
-    //    {
-    //        StopCamera = true;
-    //    }
-    //    else if (StopCamera)
-    //    {
-    //        StopCamera = false;
-    //    }
-    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
