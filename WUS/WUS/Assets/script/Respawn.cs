@@ -6,24 +6,24 @@ public class Respawn : MonoBehaviour
 {
     public float power;
     private Transform respawnpoint;
-
+    public GameObject respawn;
     // Start is called before the first frame update
     void Start()
     {
-        respawnpoint = transform.Find("Respawn");
+        respawnpoint = respawn.transform;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine("ReturnCharacter", other.gameObject);
+            ReturnPoint(other.gameObject);
         }
     }
 
-    private IEnumerator ReturnCharactor(GameObject charactor)
+    // キャラクターをリスポーン地点に戻す
+    private void ReturnPoint(GameObject getChar)
     {
-        yield return new WaitForSeconds(1f);
-        charactor.transform.position = respawnpoint.position;
+        getChar.transform.position = respawnpoint.position;
     }
 }
