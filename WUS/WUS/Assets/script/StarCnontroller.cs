@@ -14,7 +14,6 @@ public class StarCnontroller : MonoBehaviour
     float gaugeLength = 0f;
     bool shotGaugeSet = false;
 
-   
     public bool bUse = false;
 
     // Start is called before the first frame update
@@ -52,7 +51,6 @@ public class StarCnontroller : MonoBehaviour
                 Debug.Log(speed);
                 // this.rigid.useGravity = true;
                 this.rigid.constraints = RigidbodyConstraints2D.None;
-                this.bUse = false;
 
             }
 

@@ -67,20 +67,6 @@ public class StarSelect : MonoBehaviour
                 //clickedGameObject.GetComponent<StarCnontroller>().enabled = true;
                 //clickedGameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 gameObjectArray[i].GetComponent<StarCnontroller>().bUse = true;
-                
-                for(int j=i;j< allStar;j++)
-                {
-                    gameObjectArray[j] = gameObjectArray[j + 1];
-                    
-                }
-                allStar = allStar - 1;
-
-
-
-
-                
-
-
             }
             else
             {
@@ -90,8 +76,6 @@ public class StarSelect : MonoBehaviour
         }
         
     }
-
- 
     
     
 }

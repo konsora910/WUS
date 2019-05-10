@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1459068181637819521}
   - component: {fileID: 1459068181637819526}
   - component: {fileID: 1459068181637819527}
+  - component: {fileID: 1459068181637819524}
   m_Layer: 0
   m_Name: Skeleton_Floor
   m_TagString: Untagged
@@ -104,3 +105,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &1459068181637819524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459068181637819525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee60783affa88a4d98c0bd762ee5d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
