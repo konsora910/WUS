@@ -40,16 +40,4 @@ public class DropObject : MonoBehaviour
         }
     }
     
-    /*void OnCollsionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Cut_Object")
-        {
-            Debug.Log("aaaaaaaaaaa");
-            Rigidbody2D rd = GetComponent<Rigidbody2D>();
-            rd.gravityScale = 1;
-
-        }
-
-    }*/
-    
 }
