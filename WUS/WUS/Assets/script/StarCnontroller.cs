@@ -57,6 +57,7 @@ public class StarCnontroller : MonoBehaviour
                 this.rigid.constraints = RigidbodyConstraints2D.None;
                 this.bUse = false;
                 _enabled = true;
+                
 
             }
 
@@ -79,7 +80,8 @@ public class StarCnontroller : MonoBehaviour
         
         if (_enabled && !_renderer.isVisible)
         {
-            Destroy(this);
+            this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
         }
 
     }
