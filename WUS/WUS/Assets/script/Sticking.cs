@@ -15,29 +15,31 @@ public class Sticking : MonoBehaviour
         trigger
     };
     // くっつくぜスコープ
-    private FixedJoint fixedjoint;
+    private FixedJoint2D fixedjoint;
+
     // enumから星がトリガーを判断するかの判定用
     private Mode mode;
     // 刺さった判定
     private bool isSticking;
-    private float breakForce = 1200.0f;// 設定した数値以上の力が加わると外れる
-    private float breakTorque = 1200.0f;
+    private readonly float breakForce = 1200.0f;// 設定した数値以上の力が加わると外れる
+    private readonly float breakTorque = 1200.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-    /*    // コライダーから「トリガー」を取得できるか判断する
+        // コライダーから「トリガー」を取得できるか判断する
         if (mode == Mode.collision)
         {
-            GetComponentInChildren<Collider>().isTrigger = false;
-        }else if (mode == Mode.trigger)
+            GetComponentInChildren<Collider2D>().isTrigger = false;
+        }
+        else if (mode == Mode.trigger)
         {
-            GetComponentInChildren<Collider>().isTrigger = true;
-        }*/
+            GetComponentInChildren<Collider2D>().isTrigger = true;
+        }
     }
 
     // 衝突したと判断したら呼ばれる
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!isSticking)
         {
@@ -46,7 +48,7 @@ public class Sticking : MonoBehaviour
     }
 
     // 接触していない判断
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (!isSticking)
         {
@@ -55,20 +57,21 @@ public class Sticking : MonoBehaviour
     }
 
     // 壁かどうかの判断してジョイント設定をする
-    void JudgeWall(Collider col)
+    void JudgeWall(Collider2D col)
     {
         if (col.gameObject.tag == "Wall")
         {
-            if(fixedjoint==null)
+            if (fixedjoint == null)
             {
-                gameObject.AddComponent<FixedJoint>();
-                fixedjoint = GetComponent<FixedJoint>();
-                fixedjoint.connectedBody = col.gameObject.GetComponent<Rigidbody>();
+                gameObject.AddComponent<FixedJoint2D>();
+                fixedjoint = GetComponent<FixedJoint2D>();
+                fixedjoint.connectedBody = col.gameObject.GetComponent<Rigidbody2D>();
                 fixedjoint.breakForce = breakForce;
                 fixedjoint.breakTorque = breakTorque;
                 isSticking = true;
-                GetComponent<Rigidbody>().velocity = Vector3.zero;// 重力の影響をなくす
-                GetComponent<Rigidbody>().Sleep();// その場で動きが止まる
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;// 重力の影響をなくす
+
+                GetComponent<Rigidbody2D>().Sleep();// その場で動きが止まる
             }
         }else if(col.gameObject.tag != "Wall")
         {
