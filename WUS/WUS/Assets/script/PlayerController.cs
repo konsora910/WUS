@@ -5,52 +5,88 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // 変数
-  //  public float speed;
-  //  public float rotation;
-  //  public string type;
+    //  public float speed;
+    public float rotation;
+    public string type;
 
-   public GameObject playerPrefab;
-  // public GameObject starPrefab;
-  // public GameObject StopObject; // 止めるオブジェクト
+    public GameObject playerPrefab;
+    public GameObject starPrefab;
+    public GameObject StopObject; // 止めるオブジェクト
+    public GameObject bloc;
     Collision col;
     public float PositionX;
-    Rigidbody2D rigid;
+    Rigidbody rigid;
     private float speed;
-   public bool bHit = false;
-    
+    bool bHit = false;
+    bool JumpCheck = false;
+    int JumpTimeMax = 10;
+    int JumpTime = 0;
     // Start is called before the first frame update
     void Start()
     {
-        this.rigid = GetComponent<Rigidbody2D>();
-     ///   PositionX = 0.006f;
+        this.rigid = GetComponent<Rigidbody>();
+        ///   PositionX = 0.006f;
+        ///   
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if(!bHit)
+        if (!bHit)
         {
             playerPrefab.transform.position += new Vector3(PositionX, 0f, 0f);
 
+        }
+        else
+        if (bHit == true)
+        {
+
 
         }
-        if(bHit)
-        {
-            playerPrefab.transform.position -= new Vector3(PositionX, 0f, 0f);
-        }
-     //   if (!bHit)
-     //   {
-     //       playerPrefab.transform.position -= new Vector3(PositionX, 0f, 0f);
-     //
-     //   }
+        //   if (!bHit)
+        //   {
+        //       playerPrefab.transform.position -= new Vector3(PositionX, 0f, 0f);
+        //
+        //   }
+        jump();
     }
-   
+
 
     // 衝突したと判断したら呼ばれる
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         bHit ^= false;
+        if (collision.gameObject.tag == "Star")
+        {
+            if (collision.gameObject.transform.position.y  < playerPrefab.transform.position.y)
+            {
+
+            }
+            else
+            {
+                JumpCheck = true;
+            }
+        }
+
     }
-    
+
+    void jump()
+    {
+        if (JumpCheck == true)
+        {
+            JumpTime++;
+            if (JumpTime < JumpTimeMax)
+            {
+                playerPrefab.transform.position += new Vector3(0f, 0.1f, 0f);
+            }
+            else
+            {
+                JumpCheck = false;
+                JumpTime = 0;
+            }
+        }
+    }
+
 }
