@@ -3,6 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*===========================================================================
+ 
+     
+     チェックポイント単体の操作スクリプト
+     
+     
+     
+     
+===========================================================================*/
+
 public class CheckPoint : MonoBehaviour
 {
     enum Mode
@@ -10,13 +20,10 @@ public class CheckPoint : MonoBehaviour
         collision,
         trigger
     };
-    public float Move1;
-    public float Move2;
-    private float tX = 0.5f;
-    private float stMove = 0.0f;
-    private Mode mode;
-    private bool isCheck;
-    private int nCheck = 0;
+    private readonly float tX = 0.5f;// カメラの移動速度
+    public float stMove = 0.0f;// 移動量保管変数
+    private readonly Mode mode;
+
     PlayerController PCont;
     private bool StopCamera = false;
 
@@ -30,19 +37,9 @@ public class CheckPoint : MonoBehaviour
         {
             GetComponentInChildren<Collider2D>().isTrigger = true;
         }
-        switch (nCheck)
-        {
-            case 0:
-                stMove += Move1;
-                break;
-            case 1:
-                stMove += Move2;
-                break;
-            default:
-                break;
-        }
     }
 
+    // 常にかかる更新処理
     private void FixedUpdate()
     {
         if (StopCamera)
@@ -52,7 +49,7 @@ public class CheckPoint : MonoBehaviour
             {
                 StopCamera = false;
                 PCont.enabled = true;
-                nCheck++;
+                //GetComponent<SelectCPoint>().numCheck++;
             }
         }
     }
@@ -63,7 +60,6 @@ public class CheckPoint : MonoBehaviour
         {
             JudgeCheck(collision.collider);
             StopCamera = true;
-            //CameraMoveOrder();
             Debug.Log("Collision : CheckPoint");
         }
     }
@@ -76,6 +72,7 @@ public class CheckPoint : MonoBehaviour
         }
     }
 
+    // キャラクター判定処理
     void JudgeCheck(Collider2D colCheck)
     {
         if(colCheck.gameObject.tag == "Player")
@@ -84,5 +81,11 @@ public class CheckPoint : MonoBehaviour
             PCont = colCheck.GetComponent<PlayerController>();
             PCont.enabled = false;
         }
+    }
+
+    // 移動量のセット関数（譲渡先 : SelectCPoint.cs）
+    public void stmoveSet(float move)
+    {
+        stMove = move;
     }
 }
