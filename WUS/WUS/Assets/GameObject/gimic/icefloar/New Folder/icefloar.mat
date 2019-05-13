@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: e0c71c47ccdfcfa4bbc0b7929cedf428, type: 3}
+        m_Texture: {fileID: 2800000, guid: 94ef0397e6066b443a31fe14fb326b95, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -34,7 +34,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 2800000, guid: 1d654b9b5bc576d4d9ee4c811c165d17, type: 3}
+        m_Texture: {fileID: 2800000, guid: 45d8a2fb8c8591d43acc2497f2a035c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -42,19 +42,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1a8d71eef98ce4c42afc5c7b8adf4522, type: 3}
+        m_Texture: {fileID: 2800000, guid: 15e9d36d842f8d340983f93237a7e0d6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: e55f56056b6bb2641990f1ee470e8078, type: 3}
+        m_Texture: {fileID: 2800000, guid: 45d8a2fb8c8591d43acc2497f2a035c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: f456b38fcdaf5484084414ca30a7dcbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 7da3efd3e3a36ec45b71a1b3bd5d3681, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37fd881d9feea7e4fb59d295ebd0fbab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -62,18 +62,18 @@ Material:
     - _Cutoff: 0.469
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
-    - _GlossMapScale: 0.841
+    - _GlossMapScale: 0.664
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 2
-    - _OcclusionStrength: 1
-    - _Parallax: 0.0605
+    - _OcclusionStrength: 0
+    - _Parallax: 0.0353
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.4481132, g: 1, b: 0.9106812, a: 0.8117647}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
