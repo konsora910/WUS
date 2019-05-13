@@ -16,12 +16,13 @@ public class Sticking : MonoBehaviour
     };
     // くっつくぜスコープ
     private FixedJoint2D fixedjoint;
+
     // enumから星がトリガーを判断するかの判定用
     private Mode mode;
     // 刺さった判定
     private bool isSticking;
-    private float breakForce = 1200.0f;// 設定した数値以上の力が加わると外れる
-    private float breakTorque = 1200.0f;
+    private readonly float breakForce = 1200.0f;// 設定した数値以上の力が加わると外れる
+    private readonly float breakTorque = 1200.0f;
 
     // Start is called before the first frame update
     void Start()
