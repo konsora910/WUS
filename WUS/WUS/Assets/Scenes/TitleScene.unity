@@ -180,7 +180,7 @@ RectTransform:
   m_Children:
   - {fileID: 1806301094}
   m_Father: {fileID: 853892075}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -426,7 +426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30E1\u30CB\u30E5\u30FC\u306B\u623B\u308B"
+  m_Text: "\u30E1\u30CB\u30E5\u30FC\u3078\n"
 --- !u!222 &687252507
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -590,7 +590,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1920766474}
-  - {fileID: 1046222754}
   - {fileID: 363988318}
   - {fileID: 1909090242}
   m_Father: {fileID: 1185501029}
@@ -632,12 +631,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 687252505}
-  m_Father: {fileID: 853892075}
-  m_RootOrder: 1
+  m_Father: {fileID: 1185501029}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 92}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046222755
@@ -680,7 +679,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 717936937}
         m_MethodName: MenuScene
         m_Mode: 1
         m_Arguments:
@@ -939,6 +938,7 @@ RectTransform:
   m_Children:
   - {fileID: 64337473}
   - {fileID: 853892075}
+  - {fileID: 1046222754}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1124,7 +1124,7 @@ RectTransform:
   m_Children:
   - {fileID: 1997346528}
   m_Father: {fileID: 853892075}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

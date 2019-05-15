@@ -59,7 +59,7 @@ public class Sticking : MonoBehaviour
     // 壁かどうかの判断してジョイント設定をする
     void JudgeWall(Collider2D col)
     {
-        if (col.gameObject.tag == "Wall")
+        if (col.gameObject.tag == "Wall" || col.gameObject.tag == "Star")
         {
             if (fixedjoint == null)
             {
