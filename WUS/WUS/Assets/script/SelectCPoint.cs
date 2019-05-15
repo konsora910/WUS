@@ -13,7 +13,7 @@ public class SelectCPoint : MonoBehaviour
     public float CPMoveNum2;
     //=================================================
 
-    public int numCheck = 0;
+    private int numCheck = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +38,10 @@ public class SelectCPoint : MonoBehaviour
         switch (numCheck)
         {
             case 0:
-                checkPointArray[0].GetComponent<CheckPoint>().stmoveSet(CPMoveNum1);
+                checkPointArray[0].GetComponent<CheckPoint>().StmoveSet(CPMoveNum1);
                 break;
             case 1:
-                checkPointArray[1].GetComponent<CheckPoint>().stmoveSet(CPMoveNum2);
+                checkPointArray[1].GetComponent<CheckPoint>().StmoveSet(CPMoveNum1 + CPMoveNum2);
                 break;
             default:
                 break;
