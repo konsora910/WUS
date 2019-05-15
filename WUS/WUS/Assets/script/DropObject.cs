@@ -15,13 +15,16 @@ public class DropObject : MonoBehaviour
 {
     string m_num;
     string m_Name;
+    Vector3 m_Position;
+    Quaternion m_Rotation;
     // Start is called before the first frame update
     void Start()
     {
         m_Name = this.gameObject.name;
         int Lenge = m_Name.Length-1;
         m_num = m_Name.Substring(Lenge);
-        
+        m_Position = this.transform.position;
+        m_Rotation = this.transform.rotation;       
     }
 
     // Update is called once per frame
@@ -34,6 +37,11 @@ public class DropObject : MonoBehaviour
            
             Rigidbody2D rd = GetComponent<Rigidbody2D>();
             rd.gravityScale = 1;
+        }
+        else
+        {
+            this.transform.position = m_Position;
+            this.transform.rotation = m_Rotation;
         }
     }
     

@@ -1,8 +1,9 @@
-﻿//*********************************************************
-//　ギミック　ひも
-//　星(スライス)に当たったら消える
-// 要改造
-//*********************************************************
+﻿//=========================================================
+//　    CutObject
+//星(スライス)に当たったら消えるオブジェクトにつける
+//
+//特にいじるところはない
+//=========================================================
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,10 +25,7 @@ public class CutObject : MonoBehaviour
     {
         if (col.gameObject.tag == "Slice_Star")
         {
-            BoxCollider2D Collider = GetComponent<BoxCollider2D>(); //コライダー取得
-            
             this.gameObject.SetActive(false);
-            
         }
 
     }
