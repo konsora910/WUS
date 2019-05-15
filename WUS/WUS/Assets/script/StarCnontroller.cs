@@ -17,13 +17,16 @@ public class StarCnontroller : MonoBehaviour
    
     public bool bUse = false;
 
+    bool _enabled = false;
+    Renderer _renderer;
+
     // Start is called before the first frame update
     void Start()
     {
         this.rigid = GetComponent<Rigidbody2D>();
         // this.rigid.useGravity = false;
-        
 
+        _renderer = GetComponent<Renderer>();
 
 
     }
@@ -53,6 +56,8 @@ public class StarCnontroller : MonoBehaviour
                 // this.rigid.useGravity = true;
                 this.rigid.constraints = RigidbodyConstraints2D.None;
                 this.bUse = false;
+                _enabled = true;
+                
 
             }
 
@@ -71,6 +76,12 @@ public class StarCnontroller : MonoBehaviour
         else
         {
             gaugeLength = 0;
+        }
+        
+        if (_enabled && !_renderer.isVisible)
+        {
+            this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
         }
 
     }
