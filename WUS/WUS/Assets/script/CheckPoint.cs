@@ -49,11 +49,11 @@ public class CheckPoint : MonoBehaviour
             
             Transform CameraMovePoint = Camera.main.gameObject.transform;
             CameraMovePoint.Translate(tX, 0.0f, 0.0f);
-            //CameraMovePoint.rotation = Quaternion.LookRotation(Value - CameraMovePoint.position);
             if (CameraMovePoint.position.x >= stMove)
             {
                 StopCamera = false;
                 PCont.enabled = true;
+                Destroy(this.gameObject);
             }
         }
     }
@@ -64,7 +64,6 @@ public class CheckPoint : MonoBehaviour
         {
             JudgeCheck(collision.collider);
             StopCamera = true;
-            Debug.Log("Collision : CheckPoint");
         }
     }
 
