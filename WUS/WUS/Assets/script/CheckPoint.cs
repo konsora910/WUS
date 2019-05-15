@@ -24,6 +24,8 @@ public class CheckPoint : MonoBehaviour
     public float stMove = 0.0f;// 移動量保管変数
     private readonly Mode mode;
 
+    Vector3 Value;
+
     PlayerController PCont;
     private bool StopCamera = false;
 
@@ -44,12 +46,14 @@ public class CheckPoint : MonoBehaviour
     {
         if (StopCamera)
         {
-            Camera.main.gameObject.transform.Translate(tX, 0.0f, 0.0f);
-            if (Camera.main.gameObject.transform.position.x >= stMove)
+            
+            Transform CameraMovePoint = Camera.main.gameObject.transform;
+            CameraMovePoint.Translate(tX, 0.0f, 0.0f);
+            //CameraMovePoint.rotation = Quaternion.LookRotation(Value - CameraMovePoint.position);
+            if (CameraMovePoint.position.x >= stMove)
             {
                 StopCamera = false;
                 PCont.enabled = true;
-                //GetComponent<SelectCPoint>().numCheck++;
             }
         }
     }
@@ -84,7 +88,7 @@ public class CheckPoint : MonoBehaviour
     }
 
     // 移動量のセット関数（譲渡先 : SelectCPoint.cs）
-    public void stmoveSet(float move)
+    public void StmoveSet(float move)
     {
         stMove = move;
     }
