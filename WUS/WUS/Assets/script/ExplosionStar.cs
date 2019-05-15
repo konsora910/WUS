@@ -25,8 +25,8 @@ public class ExplosionStar : MonoBehaviour
     {
         if(m_bHit)
         {
-            Invoke("DeleteObject", 0.05f);      //約1フレーム後にDeleteObjectを実行する
-            
+            StartCoroutine("DeleteObject");      //約1フレーム後にDeleteObjectを実行する
+
         }
     }
     
@@ -38,8 +38,10 @@ public class ExplosionStar : MonoBehaviour
         m_bHit = true;
     }
 
-    void DeleteObject()
+        private IEnumerator DeleteObject()
     {
+        // コルーチンの処理  
+        yield return new WaitForSeconds(0.05f);
         this.gameObject.SetActive(false);
     }
 }
