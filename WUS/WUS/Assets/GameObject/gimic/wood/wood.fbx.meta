@@ -1,10 +1,15 @@
 fileFormatVersion: 2
-guid: c0a2a1a8268707e4bbfab05ff31ede0f
+guid: 9e1f9720f29d5564592e807a67d3bc88
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+    2100000: sokumen
+    2100002: mat
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: wood
   externalObjects: {}
   materials:
     importMaterials: 1
