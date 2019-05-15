@@ -17,7 +17,7 @@ public class ExplosionStar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -42,6 +42,7 @@ public class ExplosionStar : MonoBehaviour
     {
         // コルーチンの処理  
         yield return new WaitForSeconds(0.05f);
+        m_bHit = false;
         this.gameObject.SetActive(false);
     }
 }
