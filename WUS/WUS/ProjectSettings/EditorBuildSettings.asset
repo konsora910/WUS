@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 11a718f87b98e8747a8d45e6a312ee61
+  - enabled: 1
+    path: Assets/Scenes/GameClearTest.unity
+    guid: 6a66650b85dcdf04c863678312dd5adb
   m_configObjects: {}
