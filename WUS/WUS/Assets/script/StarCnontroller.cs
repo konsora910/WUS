@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class StarCnontroller : MonoBehaviour
 {
+    private const float MaxMagnitude = 2f;
+    private const float MaxDistance = 200f;
+    private const float MinDistance = 35f;
+    public Vector3 currentForce = Vector3.zero;
+    public float distance;
+
     Rigidbody2D rigid;
     Vector2 startPos;
     //  private float speed;
@@ -14,7 +20,7 @@ public class StarCnontroller : MonoBehaviour
     float gaugeLength = 0f;
     bool shotGaugeSet = false;
 
-   
+
     public bool bUse = false;
 
     bool _enabled = false;
@@ -48,17 +54,38 @@ public class StarCnontroller : MonoBehaviour
             // マウスを離した地点の座標から、発射方向を計算
             if (Input.GetMouseButtonUp(0))
             {
+
                 Vector2 endPos = Input.mousePosition;
                 Vector2 startDirection = -1 * (endPos - startPos).normalized;
-                this.rigid.AddForce(startDirection * speed);
-                shotGaugeSet = false;
-                Debug.Log(speed);
-                GetComponent<AudioSource>().Play();
-                // this.rigid.useGravity = true;
-                this.rigid.constraints = RigidbodyConstraints2D.None;
-                this.bUse = false;
-                _enabled = true;
-                
+
+
+                /*
+                this.currentForce = endPos - startPos;
+                if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
+                {
+                    this.currentForce *= MaxMagnitude / this.currentForce.magnitude;
+                }
+                */
+                distance = Vector2.Distance(startPos, endPos);
+                if (distance > MaxDistance)
+                {
+                    distance = MaxDistance;
+                }
+
+                if (distance > MinDistance)
+                {
+                    //this.rigid.AddForce(startDirection * speed);
+                    this.rigid.AddForce(startDirection * distance * 2f);
+
+                    shotGaugeSet = false;
+                    Debug.Log(speed);
+                    // this.rigid.useGravity = true;
+                    this.rigid.constraints = RigidbodyConstraints2D.None;
+                    this.bUse = false;
+                    //画面外で消す
+                    // _enabled = true;
+                }
+
 
             }
 
@@ -78,7 +105,7 @@ public class StarCnontroller : MonoBehaviour
         {
             gaugeLength = 0;
         }
-        
+
         if (_enabled && !_renderer.isVisible)
         {
             this.gameObject.SetActive(false);
@@ -95,21 +122,24 @@ public class StarCnontroller : MonoBehaviour
     // ショットゲージ関数
     void shotGaugeValue()
     {
-       // Debug.Log("呼び出し確認");
-        
-            gaugeLength += 0.025f;
-            //ゲージがMaxでゼロに戻る
-            if (gaugeLength > 1.025f)
-            {
-                gaugeLength = 0;
-            }
+        // Debug.Log("呼び出し確認");
 
-            //ゲージ長さをlengthに代入
-            shotGauge.value = gaugeLength;
-            // スピードをゲージ値から計算
-            speed = gaugeLength * 1000f + 500f;
-       
+        gaugeLength += 0.025f;
+        //ゲージがMaxでゼロに戻る
+        if (gaugeLength > 1.025f)
+        {
+            gaugeLength = 0;
+        }
+
+        //ゲージ長さをlengthに代入
+        shotGauge.value = gaugeLength;
+        // スピードをゲージ値から計算
+        speed = gaugeLength * 1000f + 500f;
+
     }
+
+
+
 
 }
 
