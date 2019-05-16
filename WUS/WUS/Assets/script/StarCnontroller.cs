@@ -53,6 +53,7 @@ public class StarCnontroller : MonoBehaviour
                 this.rigid.AddForce(startDirection * speed);
                 shotGaugeSet = false;
                 Debug.Log(speed);
+                GetComponent<AudioSource>().Play();
                 // this.rigid.useGravity = true;
                 this.rigid.constraints = RigidbodyConstraints2D.None;
                 this.bUse = false;

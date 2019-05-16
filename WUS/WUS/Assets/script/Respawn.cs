@@ -18,6 +18,7 @@ public class Respawn : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             ReturnPoint(other.gameObject);
+            GetComponent<AudioSource>().Play();
         }
     }
 
