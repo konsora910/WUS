@@ -15,6 +15,7 @@ public class Goal_Judge : MonoBehaviour
        
         if(col.gameObject.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             // デバッグログに表示される
             Destroy(col.gameObject);
             SceneManager.LoadScene("SampleScene");
