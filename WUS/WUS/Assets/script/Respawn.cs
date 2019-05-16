@@ -23,7 +23,7 @@ public class Respawn : MonoBehaviour
     }
 
     // キャラクターをリスポーン地点に戻す
-    private void ReturnPoint(GameObject getChar)
+    public void ReturnPoint(GameObject getChar)
     {
         getChar.transform.position = respawnpoint.position;
     }
