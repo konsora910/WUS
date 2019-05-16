@@ -120,15 +120,18 @@ public  void SetStar()
         for (int i = 0; i < allStar2; i++)
         {
 
-            
+            clickedGameObject = null;
+
             gameObjectArray[i] = gameObjectArray2[i];
             gameObjectArray[i].SetActive(true);
             gameObjectArray[i].transform.position = StarPosition[i];
             gameObjectArray[i].transform.rotation = StarRotation[i];
             gameObjectArray[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             gameObjectArray[i].GetComponent<StarCnontroller>().bUse = false;
+            // gameObjectArray[i].GetComponent<Rigidbody2D>().WakeUp();
+            Destroy(gameObjectArray[i].GetComponent<FixedJoint2D>());
 
-            clickedGameObject = null;
+
 
         }
         allStar = allStar2;
