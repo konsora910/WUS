@@ -15,18 +15,15 @@ public class GameController : MonoBehaviour
     {
       option.gameObject.SetActive(true);
       Sceneobject.gameObject.SetActive(false);
-#if UNITY_EDITOR
 
-
-#elif UNITY_STANDALONE
-    UnityEngine.Application.Quit();
-#endif
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape)) Quit();
-
+        {
+            //UnityEditor.EditorApplication.isPlaying = false;
+        }
 
     }
 
@@ -40,7 +37,15 @@ public class GameController : MonoBehaviour
     }
     public void GameFinish()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+
+        #if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+        #elif UNITY_WEBPLAYER
+        		Application.OpenURL("http://www.yahoo.co.jp/");
+        #else
+        		Application.Quit();
+        #endif
+        
     }
     public void Cancel()
     {
