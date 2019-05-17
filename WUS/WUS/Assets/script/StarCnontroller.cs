@@ -22,6 +22,7 @@ public class StarCnontroller : MonoBehaviour
 
 
     public bool bUse = false;
+    public bool bClick=false;
 
     bool _enabled = false;
     Renderer _renderer;
@@ -40,59 +41,68 @@ public class StarCnontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // マウスを押した地点の座標を記録
-        if (Input.GetMouseButtonDown(0))
+        if (!bUse)
+        {
+            // マウスを押した地点の座標を記録
+            if (Input.GetMouseButtonDown(0))
         {
             this.startPos = Input.mousePosition;
             shotGaugeSet = true;
         }
 
-        if (bUse)
-        {
 
-            // マウスを離した地点の座標から、発射方向を計算
-            if (Input.GetMouseButtonUp(0))
+            if (bClick)
             {
-
-                Vector2 endPos = Input.mousePosition;
-                Vector2 startDirection = -1 * (endPos - startPos).normalized;
-
-
-                /*
-                this.currentForce = endPos - startPos;
-                if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
+                // マウスを離した地点の座標から、発射方向を計算
+                if (Input.GetMouseButtonUp(0))
                 {
-                    this.currentForce *= MaxMagnitude / this.currentForce.magnitude;
+
+                    Vector2 endPos = Input.mousePosition;
+                    Vector2 startDirection = -1 * (endPos - startPos).normalized;
+
+
+                    /*
+                    this.currentForce = endPos - startPos;
+                    if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
+                    {
+                        this.currentForce *= MaxMagnitude / this.currentForce.magnitude;
+                    }
+                    */
+                    distance = Vector2.Distance(startPos, endPos);
+                    if (distance > MaxDistance)
+                    {
+                        distance = MaxDistance;
+                    }
+
+                    if (distance > MinDistance)
+                    {
+
+
+                        //this.rigid.AddForce(startDirection * speed);
+                        this.rigid.AddForce(startDirection * distance * 2f);
+
+                     //   shotGaugeSet = false;
+                        Debug.Log(speed);
+                        // this.rigid.useGravity = true;
+                        this.rigid.constraints = RigidbodyConstraints2D.None;
+                        this.bUse = true;
+                        //画面外で消す
+                        // _enabled = true;
+                    }
+                    else
+                    {
+                        this.bClick = false;
+                    }
+
+
+
                 }
-                */
-                distance = Vector2.Distance(startPos, endPos);
-                if (distance > MaxDistance)
-                {
-                    distance = MaxDistance;
-                }
-
-                if (distance > MinDistance)
-                {
-                    //this.rigid.AddForce(startDirection * speed);
-                    this.rigid.AddForce(startDirection * distance * 2f);
-
-                    shotGaugeSet = false;
-                    Debug.Log(speed);
-                    // this.rigid.useGravity = true;
-                    this.rigid.constraints = RigidbodyConstraints2D.None;
-                    this.bUse = false;
-                    //画面外で消す
-                    // _enabled = true;
-                }
-
-
             }
 
             // マウスが押されている間 ショットゲージを呼ぶ
             if (shotGaugeSet)
             {
-                shotGaugeValue();
+               // shotGaugeValue();
             }
 
             // テスト用：スペースキー押下で停止

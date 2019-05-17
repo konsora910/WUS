@@ -23,6 +23,8 @@ public class StarSelect : MonoBehaviour
 
     public bool bSave =false;
 
+    
+
         // Start is called before the first frame update
         void Start()
     {
@@ -32,7 +34,7 @@ public class StarSelect : MonoBehaviour
         {
             gameObjectArray[count] = child.gameObject;
             //gameObjectArray[count].GetComponent<StarCnontroller>().enabled = false;
-            gameObjectArray[count].GetComponent<StarCnontroller>().bUse=false;
+            //gameObjectArray[count].GetComponent<StarCnontroller>().bUse=false;
            
 
             //     Debug.Log("Child[" + count + "]:" + child.name);
@@ -68,7 +70,8 @@ public class StarSelect : MonoBehaviour
         {
 
             clickedGameObject = null;
-
+            
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
@@ -76,7 +79,17 @@ public class StarSelect : MonoBehaviour
             {
                 clickedGameObject = hit2d.transform.gameObject;
             }
-
+            
+            /*
+            Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D collition2d = Physics2D.OverlapPoint(tapPoint);
+            if (collition2d)
+            {
+                clickedGameObject = collition2d.transform.gameObject;
+            }
+            */
+            
+            
 
             Debug.Log(clickedGameObject);
         }
@@ -86,25 +99,30 @@ public class StarSelect : MonoBehaviour
             //  gameObjectArray[i].GetComponent<StarCnontroller>().enabled = false;
             if (gameObjectArray[i] == clickedGameObject)
             {
+                gameObjectArray[i].GetComponent<StarCnontroller>().bClick = true;
                 //clickedGameObject.GetComponent<StarCnontroller>().enabled = true;
                 //clickedGameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                gameObjectArray[i].GetComponent<StarCnontroller>().bUse = true;
-                
-                for (int j = i; j < allStar; j++)
+                if (gameObjectArray[i].GetComponent<StarCnontroller>().bUse)
                 {
-                    gameObjectArray[j] = gameObjectArray[j + 1];
 
+                    for (int j = i; j < allStar; j++)
+                    {
+                        gameObjectArray[j] = gameObjectArray[j + 1];
+
+
+                    }
+
+                    allStar = allStar - 1;
                 }
-                
-                allStar = allStar - 1;
-
+                //clickedGameObject = null;
 
 
             }
             else
             {
                 //gameObjectArray[i].GetComponent<StarCnontroller>().enabled = false;
-                gameObjectArray[i].GetComponent<StarCnontroller>().bUse = false;
+                // gameObjectArray[i].GetComponent<StarCnontroller>().bUse = false;
+                gameObjectArray[i].GetComponent<StarCnontroller>().bClick = false;
             }
         }
 
@@ -120,7 +138,7 @@ public  void SetStar()
         for (int i = 0; i < allStar2; i++)
         {
 
-            clickedGameObject = null;
+            
 
             gameObjectArray[i] = gameObjectArray2[i];
             gameObjectArray[i].SetActive(true);
@@ -128,10 +146,11 @@ public  void SetStar()
             gameObjectArray[i].transform.rotation = StarRotation[i];
             gameObjectArray[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             gameObjectArray[i].GetComponent<StarCnontroller>().bUse = false;
+            gameObjectArray[i].GetComponent<StarCnontroller>().bClick = false;
             // gameObjectArray[i].GetComponent<Rigidbody2D>().WakeUp();
             Destroy(gameObjectArray[i].GetComponent<FixedJoint2D>());
 
-
+           clickedGameObject = null;
 
         }
         allStar = allStar2;
