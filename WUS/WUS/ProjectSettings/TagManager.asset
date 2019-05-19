@@ -12,6 +12,7 @@ TagManager:
   - Drop_Object
   - Explosion_Star
   - BerakBlok
+  - checkpoint
   layers:
   - Default
   - TransparentFX
