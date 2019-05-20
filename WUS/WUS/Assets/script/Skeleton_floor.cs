@@ -20,7 +20,7 @@ public class Skeleton_floor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_bHit == false && m_bReset == true)
+        if (m_bHit == true && m_bReset == true)
         {
             BoxCollider2D Collider = GetComponent<BoxCollider2D>(); //コライダー取得
 
@@ -37,7 +37,6 @@ public class Skeleton_floor : MonoBehaviour
             Collider.isTrigger = false;                      //あたり判定の透過解除
             Collider.size = new Vector2(1.0f, 0.05f);        //サイズをもとのブロックの大きさに
             Collider.offset = new Vector2(0.0f, 0.5f);       //あたり判定の中心をもとのボックスの位置に
-            m_bHit = false;
         }
         if (Input.GetKey(KeyCode.Space))
         {
