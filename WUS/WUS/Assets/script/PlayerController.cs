@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private float speed;
     bool bHit = false;
     bool JumpCheck = false;
-    int JumpTimeMax = 10;
+    int JumpTimeMax = 20;
     int JumpTime = 0;
     // Start is called before the first frame update
     void Start()
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         bHit ^= false;
         if (collision.gameObject.tag == "Star")
         {
-            if (collision.gameObject.transform.position.y  < playerPrefab.transform.position.y)
+            if (collision.gameObject.transform.position.y  < playerPrefab.transform.position.y - 0.5f)
             {
 
             }
