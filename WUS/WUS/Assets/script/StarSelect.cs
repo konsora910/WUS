@@ -125,11 +125,11 @@ public class StarSelect : MonoBehaviour
                 gameObjectArray[i].GetComponent<StarCnontroller>().bClick = false;
             }
         }
-
+        /*
         if (Input.GetKey(KeyCode.Space))
         {
             SetStar();
-        }
+        }*/
     }
         
 

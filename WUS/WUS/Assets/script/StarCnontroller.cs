@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StarCnontroller : MonoBehaviour
 {
     private const float MaxMagnitude = 2f;
-    private const float MaxDistance = 200f;
+    private const float MaxDistance = 210f;
     private const float MinDistance = 35f;
     public Vector3 currentForce = Vector3.zero;
     public float distance;
@@ -48,7 +48,8 @@ public class StarCnontroller : MonoBehaviour
         {
             this.startPos = Input.mousePosition;
             shotGaugeSet = true;
-        }
+              //  Debug.Log(this.startPos);
+            }
 
 
             if (bClick)
