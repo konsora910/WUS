@@ -39,7 +39,6 @@ public class SelectCPoint : MonoBehaviour
         {
             case 0:
                 checkPointArray[0].GetComponent<CheckPoint>().StmoveSet(CPMoveNum1);
-                //Destroy(checkPointArray[0].gameObject);
                 break;
             case 1:
                 checkPointArray[1].GetComponent<CheckPoint>().StmoveSet(CPMoveNum1 + CPMoveNum2);
@@ -47,7 +46,6 @@ public class SelectCPoint : MonoBehaviour
             default:
                 break;
         }
-        //checkPointArray[numCheck].GetComponent<CheckPoint>().enabled = false;
         numCheck++;
     }
 }

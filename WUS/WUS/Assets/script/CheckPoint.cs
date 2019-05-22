@@ -23,11 +23,13 @@ public class CheckPoint : MonoBehaviour
     private readonly float tX = 0.5f;// カメラの移動速度
     public float stMove = 0.0f;// 移動量保管変数
     private readonly Mode mode;
-
+    
     Vector3 Value;
 
     PlayerController PCont;
+    Respawn Rcnt;
     private bool StopCamera = false;
+    GameObject CallPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class CheckPoint : MonoBehaviour
         {
             GetComponentInChildren<Collider2D>().isTrigger = true;
         }
+        CallPlayer = GameObject.Find("player");
     }
 
     // 常にかかる更新処理
@@ -46,7 +49,6 @@ public class CheckPoint : MonoBehaviour
     {
         if (StopCamera)
         {
-            
             Transform CameraMovePoint = Camera.main.gameObject.transform;
             CameraMovePoint.Translate(tX, 0.0f, 0.0f);
             if (CameraMovePoint.position.x >= stMove)
@@ -54,7 +56,10 @@ public class CheckPoint : MonoBehaviour
                 StopCamera = false;
                 PCont.enabled = true;
                 Destroy(this.gameObject);
+                CallPlayer.GetComponent<Respawn>().NumResP();
+                
             }
+            //GetComponent<Respawn>().NumResP();
         }
     }
 

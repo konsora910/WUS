@@ -13,6 +13,7 @@ TagManager:
   - Explosion_Star
   - BerakBlok
   - checkpoint
+  - Gimic
   layers:
   - Default
   - TransparentFX
