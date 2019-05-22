@@ -12,12 +12,14 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // リスポーン地点のオブジェクトを読み込む（配列になってないのは許せ...。）
         RespawnArray[0] = GameObject.Find("Respawn");
         RespawnArray[1] = GameObject.Find("Respawn2");
         RespawnArray[2] = GameObject.Find("Respawn3");
     }
     private void Update()
     {
+        // 
         switch (ChangeRes)
         {
             case 0:
@@ -49,9 +51,13 @@ public class Respawn : MonoBehaviour
         getChar.transform.position = respawn.transform.position;
     }
     
-    public int NumResP()
+    public void NumResP()
     {
         ChangeRes++;
+    }
+
+    public int GetResPNum()
+    {
         return ChangeRes;
     }
 }
