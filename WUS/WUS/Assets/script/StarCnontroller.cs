@@ -27,6 +27,11 @@ public class StarCnontroller : MonoBehaviour
     bool _enabled = false;
     Renderer _renderer;
 
+
+   // GameObject StarSel;
+
+   // StarSelect StarSelScript; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +40,8 @@ public class StarCnontroller : MonoBehaviour
 
         _renderer = GetComponent<Renderer>();
 
+     //   StarSel = GameObject.Find("Star"); 
+      //  StarSelScript = StarSel.GetComponent<StarSelect>();
 
     }
 
@@ -61,7 +68,7 @@ public class StarCnontroller : MonoBehaviour
                     Vector2 endPos = Input.mousePosition;
                     Vector2 startDirection = -1 * (endPos - startPos).normalized;
 
-
+                   // StarSelScript.clicknull();
                     /*
                     this.currentForce = endPos - startPos;
                     if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
@@ -89,6 +96,8 @@ public class StarCnontroller : MonoBehaviour
                         this.bUse = true;
                         //画面外で消す
                         // _enabled = true;
+
+  
                     }
                     else
                     {

@@ -21,12 +21,12 @@ public class StarSelect : MonoBehaviour
     //クリックしたオブジェクト
     public GameObject clickedGameObject;
 
-    public bool bSave =false;
+    public bool bSave = false;
 
-    
 
-        // Start is called before the first frame update
-        void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
 
         int count = 0;
@@ -35,7 +35,7 @@ public class StarSelect : MonoBehaviour
             gameObjectArray[count] = child.gameObject;
             //gameObjectArray[count].GetComponent<StarCnontroller>().enabled = false;
             //gameObjectArray[count].GetComponent<StarCnontroller>().bUse=false;
-           
+
 
             //     Debug.Log("Child[" + count + "]:" + child.name);
             count++;
@@ -44,9 +44,9 @@ public class StarSelect : MonoBehaviour
 
         if (!bSave)
         {
-            
+
             //gameObjectArray2 = gameObjectArray;
-            for(int i=0; i< allStar;i++)
+            for (int i = 0; i < allStar; i++)
             {
                 gameObjectArray2[i] = gameObjectArray[i];
                 StarPosition[i] = gameObjectArray[i].transform.position;
@@ -56,9 +56,9 @@ public class StarSelect : MonoBehaviour
             bSave = true;
 
         }
-        
 
-       // gameObjectArray[1].GetComponent<StarCnontroller>().enabled = false;
+
+        // gameObjectArray[1].GetComponent<StarCnontroller>().enabled = false;
 
 
     }
@@ -70,8 +70,8 @@ public class StarSelect : MonoBehaviour
         {
 
             clickedGameObject = null;
-            
-            
+
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
@@ -79,7 +79,7 @@ public class StarSelect : MonoBehaviour
             {
                 clickedGameObject = hit2d.transform.gameObject;
             }
-            
+
             /*
             Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D collition2d = Physics2D.OverlapPoint(tapPoint);
@@ -88,11 +88,10 @@ public class StarSelect : MonoBehaviour
                 clickedGameObject = collition2d.transform.gameObject;
             }
             */
-            
-            
-
             Debug.Log(clickedGameObject);
         }
+
+
 
         for (int i = 0; i < allStar; i++)
         {
@@ -114,7 +113,7 @@ public class StarSelect : MonoBehaviour
 
                     allStar = allStar - 1;
                 }
-                //clickedGameObject = null;
+
 
 
             }
@@ -131,14 +130,15 @@ public class StarSelect : MonoBehaviour
             SetStar();
         }*/
     }
-        
 
-public  void SetStar()
+
+
+    public void SetStar()
     {
         for (int i = 0; i < allStar2; i++)
         {
 
-            
+
 
             gameObjectArray[i] = gameObjectArray2[i];
             gameObjectArray[i].SetActive(true);
@@ -150,12 +150,19 @@ public  void SetStar()
             // gameObjectArray[i].GetComponent<Rigidbody2D>().WakeUp();
             Destroy(gameObjectArray[i].GetComponent<FixedJoint2D>());
 
-           clickedGameObject = null;
+            clickedGameObject = null;
 
         }
         allStar = allStar2;
     }
-    
 
+
+
+
+
+    public void clicknull()
+    {
+        //  clickedGameObject = null;
+    }
 
 }
