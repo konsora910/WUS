@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     public string type;
 
     public GameObject playerPrefab;
-    public GameObject starPrefab;
-    public GameObject StopObject; // 止めるオブジェクト
-    public GameObject bloc;
     Collision col;
     public float PositionX;
     Rigidbody rigid;
