@@ -7,7 +7,8 @@ public class Respawn : MonoBehaviour
     private Transform respawnpoint;
     private GameObject respawn;
     private GameObject[] RespawnArray = new GameObject[3];
-
+    AudioSource audioSource;
+    public AudioClip sound1;
     public int ChangeRes = 0;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class Respawn : MonoBehaviour
         RespawnArray[0] = GameObject.Find("Respawn");
         RespawnArray[1] = GameObject.Find("Respawn2");
         RespawnArray[2] = GameObject.Find("Respawn3");
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -41,13 +43,14 @@ public class Respawn : MonoBehaviour
         {
             GameObject pc = GetComponent<PlayerController>().gameObject;
             ReturnPoint(pc);
-            //GetComponent<AudioSource>().Play();
+
         }
     }
 
     // キャラクターをリスポーン地点に戻す
     public void ReturnPoint(GameObject getChar)
     {
+        audioSource.PlayOneShot(sound1);
         getChar.transform.position = respawn.transform.position;
     }
     

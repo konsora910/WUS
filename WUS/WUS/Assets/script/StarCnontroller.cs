@@ -11,11 +11,12 @@ public class StarCnontroller : MonoBehaviour
     public Vector3 currentForce = Vector3.zero;
     public float distance;
     AudioSource audioSource;
+    public AudioClip sound1;
     Rigidbody2D rigid;
     Vector2 startPos;
     //現在のマウスの位置
     Vector2 currentPos;
-    public AudioClip sound1;
+
     //  private float speed;
 
     public Slider shotGauge;
