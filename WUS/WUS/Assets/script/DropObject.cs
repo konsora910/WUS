@@ -32,10 +32,7 @@ public class DropObject : MonoBehaviour
     {
         GameObject CutObject = GameObject.Find("CutObject" + m_num);        //ここのGameobject.Findの()の中身をCutObjectのオブジェクト名にする
 
-        this.transform.position = m_Position;
-        this.transform.rotation = m_Rotation;
-
-        if (CutObject == null)
+        if(CutObject == null)
         {
            
             Rigidbody2D rd = GetComponent<Rigidbody2D>();

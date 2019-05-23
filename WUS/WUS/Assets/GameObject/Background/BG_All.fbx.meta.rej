@@ -1,0 +1,7 @@
+diff a/WUS/WUS/Assets/GameObject/Background/BG_All.fbx.meta b/WUS/WUS/Assets/GameObject/Background/BG_All.fbx.meta	(rejected hunks)
+@@ -1,4 +1,5 @@
+ fileFormatVersion: 2
++guid: 4c24a2f39435bc34aa46143f293b25fc
+ ModelImporter:
+   serializedVersion: 23
+   fileIDToRecycleName:
