@@ -10,12 +10,12 @@ public class StarCnontroller : MonoBehaviour
     private const float MinDistance = 35f;
     public Vector3 currentForce = Vector3.zero;
     public float distance;
-
+    AudioSource audioSource;
     Rigidbody2D rigid;
     Vector2 startPos;
     //現在のマウスの位置
     Vector2 currentPos;
-
+    public AudioClip sound1;
     //  private float speed;
 
     public Slider shotGauge;
@@ -50,7 +50,7 @@ public class StarCnontroller : MonoBehaviour
 
         StarSel = GameObject.Find("Star"); 
         StarSelScript = StarSel.GetComponent<StarSelect>();
-
+        audioSource = GetComponent<AudioSource>();
 
         bDir = false;
     }
@@ -105,8 +105,8 @@ public class StarCnontroller : MonoBehaviour
 
                     Vector2 endPos = Input.mousePosition;
                     Vector2 startDirection = -1 * (endPos - startPos).normalized;
+                    audioSource.PlayOneShot(sound1);
 
-                    
                     /*
                     this.currentForce = endPos - startPos;
                     if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
