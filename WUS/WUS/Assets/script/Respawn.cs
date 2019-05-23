@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    private Transform respawnpoint;
     private GameObject respawn;
     private GameObject[] RespawnArray = new GameObject[3];
 
-    private int ChangeRes = 0;// リスポーン地点切り替え変数
-
+    public int ChangeRes = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class Respawn : MonoBehaviour
     }
     private void Update()
     {
-        // リスポーン地点の切り替えを行う処理内容（switch文）
+        // 
         switch (ChangeRes)
         {
             case 0:
@@ -37,19 +37,7 @@ public class Respawn : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // プレイヤーがGimicタグのついたオブジェクトに当たると通る
         if (other.gameObject.tag == "Gimic")
-        {
-            GameObject pc = GetComponent<PlayerController>().gameObject;
-            ReturnPoint(pc);
-            //GetComponent<AudioSource>().Play();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // プレイヤーがGimicタグのついたオブジェクトに当たると通る
-        if (other.gameObject.tag == "Drop_Object")
         {
             GameObject pc = GetComponent<PlayerController>().gameObject;
             ReturnPoint(pc);
@@ -64,12 +52,12 @@ public class Respawn : MonoBehaviour
     }
     
     public void NumResP()
-    {// 呼び出されればリスポーン地点の切り替えになる（別スクリプトによる処理）
+    {
         ChangeRes++;
     }
 
     public int GetResPNum()
-    {// UI用Get関数
+    {
         return ChangeRes;
     }
 }
