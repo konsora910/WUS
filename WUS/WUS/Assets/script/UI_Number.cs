@@ -20,7 +20,11 @@ public class UI_Number : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       ResCheck =  player.GetComponent<Respawn>().GetResPNum();
+        if(ResCheck !=2)
+        {
+            ResCheck = player.GetComponent<Respawn>().GetResPNum();
+
+        }
         switch (ResCheck)
         {
             case 0:
