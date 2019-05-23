@@ -11,16 +11,22 @@ public class UI_Number : MonoBehaviour
     GameObject player;
     int ResCheck;
     
+    public GameObject pl;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("player");    
+        player = GameObject.Find("player");
     }
 
     // Update is called once per frame
     void Update()
     {
-       ResCheck =  player.GetComponent<Respawn>().GetResPNum();
+        if (ResCheck != 2)
+        {
+            ResCheck = player.GetComponent<Respawn>().GetResPNum();
+        }
+
+       
         switch (ResCheck)
         {
             case 0:

@@ -7,7 +7,7 @@ public class Respawn : MonoBehaviour
     private GameObject respawn;
     private GameObject[] RespawnArray = new GameObject[3];
 
-    private int ChangeRes = 0;// リスポーン地点切り替え変数
+    public int ChangeRes = 0;// リスポーン地点切り替え変数
 
     // Start is called before the first frame update
     void Start()
