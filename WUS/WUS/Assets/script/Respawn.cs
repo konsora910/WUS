@@ -46,6 +46,17 @@ public class Respawn : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // プレイヤーがGimicタグのついたオブジェクトに当たると通る
+        if (other.gameObject.tag == "Drop_Object")
+        {
+            GameObject pc = GetComponent<PlayerController>().gameObject;
+            ReturnPoint(pc);
+            //GetComponent<AudioSource>().Play();
+        }
+    }
+
     // キャラクターをリスポーン地点に戻す
     public void ReturnPoint(GameObject getChar)
     {
