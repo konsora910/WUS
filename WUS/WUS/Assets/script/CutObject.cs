@@ -10,10 +10,12 @@ using UnityEngine;
 
 public class CutObject : MonoBehaviour
 {
+    AudioSource audioSource;
+    public AudioClip sound1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class CutObject : MonoBehaviour
     {
         if (col.gameObject.tag == "Slice_Star")
         {
+            audioSource.PlayOneShot(sound1);
             this.gameObject.SetActive(false);
         }
 
