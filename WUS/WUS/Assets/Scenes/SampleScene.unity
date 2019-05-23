@@ -1371,7 +1371,6 @@ Transform:
   - {fileID: 1408083596}
   - {fileID: 1766349253}
   - {fileID: 2031272357}
-  - {fileID: 646798775}
   m_Father: {fileID: 417943333}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3093,6 +3092,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &423935329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3458,6 +3458,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!58 &505964886
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4307,7 +4308,7 @@ GameObject:
   - component: {fileID: 646798777}
   - component: {fileID: 646798776}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StarDirCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4325,8 +4326,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2002419651}
-  m_Father: {fileID: 172811307}
-  m_RootOrder: 15
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5744,6 +5745,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!58 &895458492
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6621,6 +6623,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &1044513864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6807,6 +6810,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!58 &1048890039
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8961,6 +8965,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &1386988423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9268,6 +9273,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!82 &1408083600
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9611,6 +9617,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!82 &1415735757
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10059,6 +10066,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &1446764886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10233,6 +10241,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &1460377377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12100,6 +12109,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!82 &1766349257
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13300,6 +13310,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!58 &1974298238
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13484,6 +13495,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!4 &1977568134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 178549c4a2145ac4d9cff8370326e0e0,
@@ -13843,7 +13855,7 @@ GameObject:
   - component: {fileID: 2002419653}
   - component: {fileID: 2002419652}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DirImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13865,7 +13877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 264, y: 191}
   m_SizeDelta: {x: 120, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002419652
@@ -14118,6 +14130,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &2031272359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14369,6 +14382,7 @@ MonoBehaviour:
   shotGauge: {fileID: 4189161582661958085}
   bUse: 0
   bClick: 0
+  bDir: 0
 --- !u!114 &2073271254
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ public class StarCnontroller : MonoBehaviour
 
     Rigidbody2D rigid;
     Vector2 startPos;
+    //現在のマウスの位置
+    Vector2 currentPos;
+
     //  private float speed;
 
     public Slider shotGauge;
@@ -23,14 +26,19 @@ public class StarCnontroller : MonoBehaviour
 
     public bool bUse = false;
     public bool bClick=false;
+    //矢印
+    public bool bDir = false;
 
     bool _enabled = false;
     Renderer _renderer;
+    public float angle;
 
 
-   // GameObject StarSel;
+    GameObject StarSel;
 
-   // StarSelect StarSelScript; 
+    StarSelect StarSelScript;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -40,14 +48,25 @@ public class StarCnontroller : MonoBehaviour
 
         _renderer = GetComponent<Renderer>();
 
-     //   StarSel = GameObject.Find("Star"); 
-      //  StarSelScript = StarSel.GetComponent<StarSelect>();
+        StarSel = GameObject.Find("Star"); 
+        StarSelScript = StarSel.GetComponent<StarSelect>();
 
+
+        bDir = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (bUse)
+        {
+            bDir = false;
+        }
+        
+
+        
+
         if (!bUse)
         {
             // マウスを押した地点の座標を記録
@@ -57,18 +76,37 @@ public class StarCnontroller : MonoBehaviour
             shotGaugeSet = true;
               //  Debug.Log(this.startPos);
             }
-
+            
 
             if (bClick)
             {
+                currentPos = Input.mousePosition;
+
+                distance = Vector2.Distance(startPos, currentPos);
+                if (distance > MinDistance)
+                {
+                    bDir = true;
+                }
+                else
+                {
+                    bDir = false;
+                }
+
+                Vector2 vec2 = new Vector2(currentPos.x - startPos.x,currentPos.y - startPos.y);
+
+                float r = Mathf.Atan2(vec2.y, vec2.x);
+                angle = Mathf.Floor(r * 360 / (2 * Mathf.PI));
+
+
                 // マウスを離した地点の座標から、発射方向を計算
                 if (Input.GetMouseButtonUp(0))
                 {
+                    
 
                     Vector2 endPos = Input.mousePosition;
                     Vector2 startDirection = -1 * (endPos - startPos).normalized;
 
-                   // StarSelScript.clicknull();
+                    
                     /*
                     this.currentForce = endPos - startPos;
                     if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
@@ -84,8 +122,8 @@ public class StarCnontroller : MonoBehaviour
 
                     if (distance > MinDistance)
                     {
-
-
+                        
+                        
                         //this.rigid.AddForce(startDirection * speed);
                         this.rigid.AddForce(startDirection * distance * 2f);
 
@@ -96,18 +134,29 @@ public class StarCnontroller : MonoBehaviour
                         this.bUse = true;
                         //画面外で消す
                         // _enabled = true;
+                        this.bClick = false;
+                        bDir = false;
+                        // startPos = new Vector2(0f,0f);
+                        //endPos = new Vector2(0f, 0f);
+                        distance = 0f;
 
-  
+
+
                     }
                     else
                     {
                         this.bClick = false;
                     }
-
-
+                    this.bClick = false;
+                    StarSelScript.clicknull();
 
                 }
             }
+            else
+            {
+                bDir = false;
+            }
+            
 
             // マウスが押されている間 ショットゲージを呼ぶ
             if (shotGaugeSet)
