@@ -46,5 +46,11 @@ public class DropObject : MonoBehaviour
             this.transform.rotation = m_Rotation;
         }
     }
-    
+
+    public void Resetobject()
+    {
+        this.gameObject.transform.position = m_Position;
+        Rigidbody2D rd = GetComponent<Rigidbody2D>();
+        rd.gravityScale = 1;
+    }
 }

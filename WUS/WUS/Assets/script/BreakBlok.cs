@@ -38,4 +38,9 @@ public class BreakBlok : MonoBehaviour
         }
         
     }
+
+    public void ResetObject()
+    {
+        this.gameObject.SetActive(true);
+    }
 }
