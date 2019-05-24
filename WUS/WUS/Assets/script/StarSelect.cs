@@ -5,11 +5,11 @@ using UnityEngine;
 public class StarSelect : MonoBehaviour
 {
     //星の総数
-    public GameObject[] gameObjectArray = new GameObject[20];
+    public GameObject[] gameObjectArray = new GameObject[40];
     //保存
-    public GameObject[] gameObjectArray2 = new GameObject[20];
-    public Vector3[] StarPosition = new Vector3[20];
-    public Quaternion[] StarRotation = new Quaternion[20];
+    public GameObject[] gameObjectArray2 = new GameObject[40];
+    public Vector3[] StarPosition = new Vector3[40];
+    public Quaternion[] StarRotation = new Quaternion[0];
 
 
     //public Transform[] StarTransform = new Transform[20];
@@ -167,7 +167,7 @@ public class StarSelect : MonoBehaviour
         for (int i = 0; i < allStar2; i++)
         {
 
-
+            clickedGameObject = null;
 
             gameObjectArray[i] = gameObjectArray2[i];
             gameObjectArray[i].SetActive(true);

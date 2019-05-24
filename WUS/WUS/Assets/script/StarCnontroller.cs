@@ -134,7 +134,7 @@ public class StarCnontroller : MonoBehaviour
                         this.rigid.constraints = RigidbodyConstraints2D.None;
                         this.bUse = true;
                         //画面外で消す
-                        // _enabled = true;
+                         _enabled = true;
                         this.bClick = false;
                         bDir = false;
                         // startPos = new Vector2(0f,0f);
