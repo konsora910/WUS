@@ -42,7 +42,7 @@ public class Respawn : MonoBehaviour
         {
             GameObject pc = GetComponent<PlayerController>().gameObject;
             ReturnPoint(pc);
-            //GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().Play();
         }
     }
 

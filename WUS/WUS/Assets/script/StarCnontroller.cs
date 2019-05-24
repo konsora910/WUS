@@ -94,7 +94,7 @@ public class StarCnontroller : MonoBehaviour
                         this.bClick = false;
                     }
 
-
+                    GetComponent<AudioSource>().Play();
 
                 }
             }
