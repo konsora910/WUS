@@ -51,6 +51,6 @@ public class DropObject : MonoBehaviour
     {
         this.gameObject.transform.position = m_Position;
         Rigidbody2D rd = GetComponent<Rigidbody2D>();
-        rd.gravityScale = 1;
+        rd.gravityScale = 0;
     }
 }
