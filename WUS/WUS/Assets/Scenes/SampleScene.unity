@@ -674,8 +674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &32742724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1203,8 +1201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &57810075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2970,6 +2966,7 @@ Transform:
   - {fileID: 804143336}
   - {fileID: 637365997}
   - {fileID: 622235388}
+  - {fileID: 1635167788}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3448,7 +3445,7 @@ Transform:
   - {fileID: 1639634819}
   - {fileID: 188069918}
   m_Father: {fileID: 1399500833}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201100761
 GameObject:
@@ -4623,7 +4620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: 330}
+  m_AnchoredPosition: {x: -900, y: 500}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329140245
@@ -5856,8 +5853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!82 &412002427
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6131,8 +6126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &418348860
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7542,7 +7535,7 @@ Transform:
   - {fileID: 1700168130}
   - {fileID: 259215233}
   m_Father: {fileID: 1399500833}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &494489733
 PrefabInstance:
@@ -8267,10 +8260,9 @@ Transform:
   - {fileID: 1362096880}
   - {fileID: 1766620059}
   - {fileID: 1339652947}
-  - {fileID: 1187466117}
   - {fileID: 165115170}
   m_Father: {fileID: 1399500833}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &551510785
 PrefabInstance:
@@ -9141,8 +9133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 8300000, guid: 853355da963960d46a739f45ea7e0cf0, type: 3}
-  ChangeRes: 0
 --- !u!82 &566542085
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9475,9 +9465,8 @@ Transform:
   - {fileID: 1686092948}
   - {fileID: 1544963507}
   - {fileID: 852009351}
-  - {fileID: 1635167788}
   m_Father: {fileID: 1399500833}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575166300 stripped
 GameObject:
@@ -11088,8 +11077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &689192451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12043,7 +12030,7 @@ Transform:
   - {fileID: 681723539}
   - {fileID: 712129456}
   m_Father: {fileID: 1399500833}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &812014991
 GameObject:
@@ -12396,10 +12383,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_All (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.33
@@ -12455,6 +12438,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
       propertyPath: m_LocalScale.z
       value: 25.908
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13853,8 +13840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &939829654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14783,8 +14768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &966188101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15232,8 +15215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &998309508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16543,8 +16524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1094066957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17851,8 +17830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1166085990
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18116,8 +18093,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1571181179}
-  m_Father: {fileID: 543789530}
-  m_RootOrder: 5
+  m_Father: {fileID: 1399500833}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1210450372
 PrefabInstance:
@@ -18350,10 +18327,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG_All
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.33
@@ -18409,6 +18382,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
       propertyPath: m_LocalScale.z
       value: 25.908
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: b24119afd228a7440b1bc68b7a73b812, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19324,8 +19301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1251506551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20082,8 +20057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1309532194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20809,6 +20782,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1156856610}
+  - {fileID: 1187466117}
   - {fileID: 490422011}
   - {fileID: 807147137}
   - {fileID: 2052795990}
@@ -21254,8 +21228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1411658408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21883,8 +21855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1432250096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22575,8 +22545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!1001 &1464781315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22973,7 +22941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 350}
+  m_AnchoredPosition: {x: 850, y: 500}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479404212
@@ -25591,8 +25559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1531425728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26833,8 +26799,8 @@ Transform:
   m_Children:
   - {fileID: 1635167791}
   - {fileID: 291487747}
-  m_Father: {fileID: 574694403}
-  m_RootOrder: 8
+  m_Father: {fileID: 160476789}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635167789
 GameObject:
@@ -26965,8 +26931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!82 &1637013384
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28751,8 +28715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1750411887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29575,8 +29537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!1 &1802648519
 GameObject:
   m_ObjectHideFlags: 0
@@ -29719,8 +29679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1802648523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30145,8 +30103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!1001 &1880715603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30747,7 +30703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 350}
+  m_AnchoredPosition: {x: 800, y: 500}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922275498
@@ -30945,8 +30901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &1924862530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32306,7 +32260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: 350}
+  m_AnchoredPosition: {x: 900, y: 500}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002475078
@@ -32601,8 +32555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &2022263674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33063,8 +33015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &2032071953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35173,8 +35123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d276fc341ddfe4aa180ebeeb099770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
-  ChangeRes: 0
 --- !u!61 &2138979246
 BoxCollider2D:
   m_ObjectHideFlags: 0
