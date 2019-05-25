@@ -32,4 +32,9 @@ public class CutObject : MonoBehaviour
         }
 
     }
+
+    public void ResetObject()
+    {
+        this.gameObject.SetActive(true);
+    }
 }
