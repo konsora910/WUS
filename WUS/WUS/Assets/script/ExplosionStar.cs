@@ -14,10 +14,13 @@ public class ExplosionStar : MonoBehaviour
     bool m_bHit = false;                    //オブジェクトに当たったかどうか
     public static float RADIUS = 0.03f;     //爆発の範囲変更はここの数値　元のサイズは0.01
 
+    public AudioClip Bomb;
+    AudioSource SoundName;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        SoundName = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,7 +29,7 @@ public class ExplosionStar : MonoBehaviour
         if(m_bHit)
         {
             StartCoroutine("DeleteObject");      //約1フレーム後にDeleteObjectを実行する
-
+            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Bomb);
         }
     }
     
