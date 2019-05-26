@@ -19667,11 +19667,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eff_Burst3
       objectReference: {fileID: 0}
-    - target: {fileID: 2081980961019072507, guid: fa375ac0fdc32c1498ed31e223f11d47,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2081980961019072452, guid: fa375ac0fdc32c1498ed31e223f11d47,
         type: 3}
       propertyPath: m_LocalPosition.x
