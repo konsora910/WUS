@@ -15,12 +15,13 @@ public class ExplosionStar : MonoBehaviour
     public static float RADIUS = 0.03f;     //爆発の範囲変更はここの数値　元のサイズは0.01
 
     public AudioClip Bomb;
-    AudioSource SoundName;
+    public GameObject particle;
+    public GameObject StarPos;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        SoundName = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +38,7 @@ public class ExplosionStar : MonoBehaviour
     {
         CircleCollider2D Colliders = GetComponent<CircleCollider2D>();
 
+        Instantiate(particle, StarPos.transform.position, Quaternion.identity);
         Colliders.radius = RADIUS;       
         m_bHit = true;
     }
