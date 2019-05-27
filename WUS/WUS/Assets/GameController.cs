@@ -6,6 +6,8 @@ public class GameController : MonoBehaviour
 {
     public GameObject option;
     public GameObject Sceneobject;
+
+    public AudioClip SelectSE;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +31,12 @@ public class GameController : MonoBehaviour
 
     public void TitleScene()
     {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
         SceneManager.LoadScene("TitleScene");
     }
     public void MenuScene()
     {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
         SceneManager.LoadScene("MenuScene");
     }
     public void GameFinish()
@@ -54,6 +58,8 @@ public class GameController : MonoBehaviour
     }
     public void tutorial()
     {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
+        DontDestroyOnLoad(SelectSE);
         SceneManager.LoadScene("SampleScene");
     }
 }
