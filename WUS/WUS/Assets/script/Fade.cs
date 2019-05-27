@@ -68,4 +68,8 @@ public class Fade : MonoBehaviour
     {
         isFadeOut = true;
     }
+    public void FadeIn()
+    {
+        isFadeIn = true;
+    }
 }

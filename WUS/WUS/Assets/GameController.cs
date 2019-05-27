@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Fade = GameObject.Find("Fade");
+        Fade.GetComponent<Fade>().FadeIn();
     }
     void Quit()
     {
