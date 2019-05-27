@@ -32,8 +32,6 @@ public class DropObject : MonoBehaviour
     {
         GameObject CutObject = GameObject.Find("CutObject" + m_num);        //ここのGameobject.Findの()の中身をCutObjectのオブジェクト名にする
 
-        Vector3 pos = this.gameObject.transform.position;
-        this.gameObject.transform.position = new Vector3(m_Position.x, pos.y, m_Position.z);
         if (CutObject == null)
         {
            
@@ -46,6 +44,8 @@ public class DropObject : MonoBehaviour
             this.transform.rotation = m_Rotation;
         }
     }
+
+   
 
     public void Resetobject()
     {
