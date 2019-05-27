@@ -17469,7 +17469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   option: {fileID: 1315289397}
   Sceneobject: {fileID: 160476788}
-  SelectSE: {fileID: 0}
+  SelectSE: {fileID: 8300000, guid: 966645eb2069d344e946ab0ab2a3c08d, type: 3}
 --- !u!4 &1493555106
 Transform:
   m_ObjectHideFlags: 0
