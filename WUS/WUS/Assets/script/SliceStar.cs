@@ -28,7 +28,11 @@ public class SliceStar : MonoBehaviour
       */
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Cut_Object" || col.gameObject.tag == "Star")
+        //if (col.gameObject.tag == "Cut_Object" || col.gameObject.tag == "Star")
+        //{
+        //    GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
+        //}
+        if (col.gameObject.tag == "Cut_Object")
         {
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
         }

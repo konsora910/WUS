@@ -36,7 +36,7 @@ public class SelectCPoint : MonoBehaviour
     void Update()
     {
         switch (numCheck)
-        {
+        {   
             case 0:
                 checkPointArray[0].GetComponent<CheckPoint>().StmoveSet(CPMoveNum1);
                 break;
