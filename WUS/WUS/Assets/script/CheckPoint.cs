@@ -30,6 +30,7 @@ public class CheckPoint : MonoBehaviour
     Respawn Rcnt;
     private bool StopCamera = false;
     GameObject CallPlayer;
+    public AudioClip CPSE;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,7 @@ public class CheckPoint : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             JudgeCheck(collision.collider);
+            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(CPSE);
             StopCamera = true;
         }
     }
