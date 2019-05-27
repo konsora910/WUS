@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*===========================================================================
  
@@ -31,7 +32,7 @@ public class CheckPoint : MonoBehaviour
     private bool StopCamera = false;
     GameObject CallPlayer;
     public AudioClip CPSE;
-
+    //[RequireComponent(typeof(Slider))]
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class CheckPoint : MonoBehaviour
             GetComponentInChildren<Collider2D>().isTrigger = true;
         }
         CallPlayer = GameObject.Find("player");
+    //    this.GetComponent<Slider>().onValueChanged.AddListener(value)
     }
 
     // 常にかかる更新処理
