@@ -5,11 +5,11 @@ using UnityEngine;
 public class StarSelect : MonoBehaviour
 {
     //星の総数
-    public GameObject[] gameObjectArray = new GameObject[40];
+    public GameObject[] gameObjectArray = new GameObject[50];
     //保存
-    public GameObject[] gameObjectArray2 = new GameObject[40];
-    public Vector3[] StarPosition = new Vector3[40];
-    public Quaternion[] StarRotation = new Quaternion[0];
+    public GameObject[] gameObjectArray2 = new GameObject[50];
+    public Vector3[] StarPosition = new Vector3[50];
+    public Quaternion[] StarRotation = new Quaternion[50];
 
 
     //public Transform[] StarTransform = new Transform[20];
