@@ -776,8 +776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RangeX: 605.9
-  RangeY: 137.9
+  RangeX: 980.6
+  RangeY: 220.1
 --- !u!1 &1065280372
 GameObject:
   m_ObjectHideFlags: 0

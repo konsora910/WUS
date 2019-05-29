@@ -1276,6 +1276,7 @@ GameObject:
   - component: {fileID: 91175354}
   - component: {fileID: 91175353}
   - component: {fileID: 91175352}
+  - component: {fileID: 91175355}
   m_Layer: 5
   m_Name: cancel
   m_TagString: Untagged
@@ -1392,6 +1393,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91175350}
   m_CullTransparentMesh: 0
+--- !u!114 &91175355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91175350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RangeX: 163
+  RangeY: 50
 --- !u!1 &92449583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5023,6 +5038,7 @@ GameObject:
   - component: {fileID: 467788011}
   - component: {fileID: 467788010}
   - component: {fileID: 467788009}
+  - component: {fileID: 467788012}
   m_Layer: 5
   m_Name: finish
   m_TagString: Untagged
@@ -5139,6 +5155,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467788007}
   m_CullTransparentMesh: 0
+--- !u!114 &467788012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467788007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RangeX: 172.4
+  RangeY: 50
 --- !u!1 &469336998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 178549c4a2145ac4d9cff8370326e0e0,
@@ -23720,6 +23750,7 @@ GameObject:
   - component: {fileID: 1871279250}
   - component: {fileID: 1871279248}
   - component: {fileID: 1871279249}
+  - component: {fileID: 1871279252}
   m_Layer: 5
   m_Name: restart
   m_TagString: Untagged
@@ -23836,6 +23867,20 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: -102}
   m_SizeDelta: {x: 149.95, y: 43.9}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1871279252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871279247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RangeX: 149.95
+  RangeY: 43.9
 --- !u!1001 &1880715603
 PrefabInstance:
   m_ObjectHideFlags: 0
