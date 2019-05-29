@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 1046222756}
   - component: {fileID: 1046222755}
   - component: {fileID: 1046222758}
+  - component: {fileID: 1046222759}
   m_Layer: 5
   m_Name: menu
   m_TagString: Untagged
@@ -587,8 +588,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.9811321, g: 0.74925995, b: 0.30081883, a: 1}
+    m_PressedColor: {r: 0.3773585, g: 0.36845854, b: 0.36845854, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -608,6 +609,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 717936937}
         m_MethodName: MenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1046222759}
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -752,6 +764,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1046222759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046222753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RangeX: 605.9
+  RangeY: 137.9
 --- !u!1 &1065280372
 GameObject:
   m_ObjectHideFlags: 0
