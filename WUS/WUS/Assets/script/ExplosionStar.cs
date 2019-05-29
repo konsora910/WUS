@@ -33,14 +33,18 @@ public class ExplosionStar : MonoBehaviour
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Bomb);
         }
     }
-    
+
     void OnCollisionEnter2D(Collision2D col)
     {
-        CircleCollider2D Colliders = GetComponent<CircleCollider2D>();
+        if (!col.collider.isTrigger)
+        { 
+            CircleCollider2D Colliders = GetComponent<CircleCollider2D>();
 
         Instantiate(particle, StarPos.transform.position, Quaternion.identity);
-        Colliders.radius = RADIUS;       
+        Colliders.radius = RADIUS;
         m_bHit = true;
+    }
+        
     }
 
         private IEnumerator DeleteObject()
