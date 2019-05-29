@@ -25,14 +25,13 @@ public class CheckPoint : MonoBehaviour
     public float stMove = 0.0f;// 移動量保管変数
     private readonly Mode mode;
     
-    Vector3 Value;
 
     PlayerController PCont;
     Respawn Rcnt;
     private bool StopCamera = false;
     GameObject CallPlayer;
     public AudioClip CPSE;
-    //[RequireComponent(typeof(Slider))]
+    public AudioSource AudioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +43,6 @@ public class CheckPoint : MonoBehaviour
             GetComponentInChildren<Collider2D>().isTrigger = true;
         }
         CallPlayer = GameObject.Find("player");
-    //    this.GetComponent<Slider>().onValueChanged.AddListener(value)
     }
 
     // 常にかかる更新処理
@@ -65,13 +63,14 @@ public class CheckPoint : MonoBehaviour
             //GetComponent<Respawn>().NumResP();
         }
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             JudgeCheck(collision.collider);
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(CPSE);
+            GameObject.FindObjectOfType<AudioSource>().volume = 0.5f;
             StopCamera = true;
         }
     }
