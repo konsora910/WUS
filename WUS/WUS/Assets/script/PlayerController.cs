@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private float speed;
     bool bHit = false;
     bool JumpCheck = false;
-    int JumpTimeMax = 20;
+    int JumpTimeMax = 15;
     int JumpTime = 0;
     // Start is called before the first frame update
     void Start()
