@@ -19,7 +19,7 @@ public class SliceStar : MonoBehaviour
     {
         Audiosouce = GetComponent<AudioSource>();
     }
-    
+
     /*  // Update is called once per frame
       void Update()
       {
@@ -32,14 +32,17 @@ public class SliceStar : MonoBehaviour
         //{
         //    GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
         //}
-        if (col.gameObject.tag == "Cut_Object")
+        if (!col.isTrigger)
         {
-            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
-        }
-        else
-        {
-            this.gameObject.SetActive(false);
-            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(NoCut);
+            if (col.gameObject.tag == "Cut_Object")
+            {
+                GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
+            }
+            else
+            {
+                this.gameObject.SetActive(false);
+                GameObject.FindObjectOfType<AudioSource>().PlayOneShot(NoCut);
+            }
         }
     }
 }
