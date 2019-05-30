@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         bHit ^= false;
-        if (collision.gameObject.tag == "Star")
+        if (collision.gameObject.tag == "Star"&& !collision.collider.isTrigger )
         {
             if (collision.gameObject.transform.position.y  < playerPrefab.transform.position.y - 0.5f)
             {

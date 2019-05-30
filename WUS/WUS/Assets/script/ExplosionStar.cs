@@ -17,11 +17,12 @@ public class ExplosionStar : MonoBehaviour
     public AudioClip Bomb;
     public GameObject particle;
     public GameObject StarPos;
-
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,17 +31,24 @@ public class ExplosionStar : MonoBehaviour
         if(m_bHit)
         {
             StartCoroutine("DeleteObject");      //約1フレーム後にDeleteObjectを実行する
+            //source.PlayOneShot(Bomb);
+            //source.volume = 0.8f;
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Bomb);
+            GameObject.FindObjectOfType<AudioSource>().volume = 0.1f;
         }
     }
-    
+
     void OnCollisionEnter2D(Collision2D col)
     {
-        CircleCollider2D Colliders = GetComponent<CircleCollider2D>();
+        if (!col.collider.isTrigger)
+        { 
+            CircleCollider2D Colliders = GetComponent<CircleCollider2D>();
 
         Instantiate(particle, StarPos.transform.position, Quaternion.identity);
-        Colliders.radius = RADIUS;       
+        Colliders.radius = RADIUS;
         m_bHit = true;
+    }
+        
     }
 
         private IEnumerator DeleteObject()
