@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2102,6 +2102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -4877,6 +4878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac06ce0234454d241a5d5736609f2e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &352236906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5029,6 +5031,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a8d9bf9c423d4de44a3d79426b348c46, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d80d3ae4fae0cd4f952bc9d2362eb38, type: 2}
     - target: {fileID: 400004, guid: a8d9bf9c423d4de44a3d79426b348c46, type: 3}
       propertyPath: m_LocalScale.y
       value: 3.5894916
@@ -5053,10 +5059,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2.8513
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: a8d9bf9c423d4de44a3d79426b348c46, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2d80d3ae4fae0cd4f952bc9d2362eb38, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d9bf9c423d4de44a3d79426b348c46, type: 3}
 --- !u!4 &352475922 stripped
@@ -6292,6 +6294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -6456,6 +6459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -7000,6 +7004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -7525,6 +7530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -8158,6 +8164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -9249,6 +9256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -12792,6 +12800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -13755,6 +13764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -14583,6 +14593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac06ce0234454d241a5d5736609f2e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &990720921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15032,6 +15043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42c1f736e19b64dbe9a0658e4ebafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &1004545283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15523,6 +15535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -15711,6 +15724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -16272,6 +16286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -18424,6 +18439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -19970,6 +19986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -20348,6 +20365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -20693,6 +20711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -20997,6 +21016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac06ce0234454d241a5d5736609f2e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &1421799845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21563,6 +21583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -21739,6 +21760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -22484,6 +22506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -22668,6 +22691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac06ce0234454d241a5d5736609f2e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &1483127960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22850,6 +22874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -23431,6 +23456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -24249,6 +24275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -25457,6 +25484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42c1f736e19b64dbe9a0658e4ebafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &1571415900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27067,6 +27095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -28014,6 +28043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -29372,6 +29402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -30515,6 +30546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -30701,6 +30733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -31821,6 +31854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -32398,6 +32432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42c1f736e19b64dbe9a0658e4ebafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &2052795993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32636,6 +32671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42c1f736e19b64dbe9a0658e4ebafb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound1: {fileID: 0}
 --- !u!61 &2063212691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32777,6 +32813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -32941,6 +32978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForce: {x: 0, y: 0, z: 0}
   distance: 0
+  sound1: {fileID: 0}
   shotGauge: {fileID: 0}
   bUse: 0
   bClick: 0
@@ -34207,6 +34245,75 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 937576177132653723, guid: ae45fd0c396879b4da5b9cdac8730b93, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae45fd0c396879b4da5b9cdac8730b93, type: 3}
+--- !u!1001 &1084342879232146718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1004545280}
+    m_Modifications:
+    - target: {fileID: 1910790146866200220, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_Name
+      value: Eff_Burst
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747057164132231699, guid: fa375ac0fdc32c1498ed31e223f11d47,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa375ac0fdc32c1498ed31e223f11d47, type: 3}
 --- !u!1001 &2901174696841892243
 PrefabInstance:
   m_ObjectHideFlags: 0
