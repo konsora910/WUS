@@ -39,7 +39,12 @@ public class StarCnontroller : MonoBehaviour
 
     StarSelect StarSelScript;
 
-    
+    //矢印
+    GameObject StarDir;
+    public float fScaleX;
+    public float fScaleY;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +57,8 @@ public class StarCnontroller : MonoBehaviour
         StarSel = GameObject.Find("Star"); 
         StarSelScript = StarSel.GetComponent<StarSelect>();
         audioSource = GetComponent<AudioSource>();
+
+        StarDir = GameObject.Find("StarDir");
 
         bDir = false;
     }
@@ -84,9 +91,18 @@ public class StarCnontroller : MonoBehaviour
                 currentPos = Input.mousePosition;
 
                 distance = Vector2.Distance(startPos, currentPos);
+                if (distance> MaxDistance)
+                {
+                    distance = MaxDistance;
+                }
+
+                fScaleX = 1 + distance / MaxDistance;
+                fScaleY = 1 + distance / MaxDistance;
+                
                 if (distance > MinDistance)
                 {
                     bDir = true;
+                    StarDir.transform.localScale = new Vector3(fScaleX, fScaleY, 1);
                 }
                 else
                 {

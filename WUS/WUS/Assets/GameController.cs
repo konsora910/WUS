@@ -21,10 +21,16 @@ public class GameController : MonoBehaviour
         Fade = GameObject.Find("Fade");
         Fade.GetComponent<Fade>().FadeIn();
     }
-    void Quit()
+    public void Quit()
     {
       option.gameObject.SetActive(true);
       Sceneobject.gameObject.SetActive(false);
+
+    }
+    public void notQuit()
+    {
+        option.gameObject.SetActive(false);
+        Sceneobject.gameObject.SetActive(true);
 
     }
     // Update is called once per frame
