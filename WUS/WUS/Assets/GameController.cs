@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
 
         if (MenuFadeCheck == true)
         {
-            MenuFadeOut();
+            StartCoroutine("MenuFadeOut");
         }
 
         if (FinishFadeCheck == true)
@@ -70,8 +70,9 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("TitleScene");
         }
     }
-    void MenuFadeOut()
+    private IEnumerator MenuFadeOut()
     {
+        yield return new WaitForSeconds(1.0f);
         Fade.GetComponent<Fade>().FadeOut();
         FadeTime++;
         if (FadeTime > FadeTimeMax)
