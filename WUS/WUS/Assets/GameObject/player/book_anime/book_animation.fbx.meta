@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 0bd4d363a02ce104397bca7867e463db
+<<<<<<< HEAD
+guid: 58bdf36f926d6db41b95896122ff4e1c
+=======
+guid: 0147e5cad59b9a24d8869918ce75f142
+>>>>>>> 動画作成
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
