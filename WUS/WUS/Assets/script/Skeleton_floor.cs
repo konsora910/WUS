@@ -38,10 +38,7 @@ public class Skeleton_floor : MonoBehaviour
             Collider.size = new Vector2(1.0f, 0.05f);        //サイズをもとのブロックの大きさに
             Collider.offset = new Vector2(0.0f, 0.5f);       //あたり判定の中心をもとのボックスの位置に
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            ResetSkeltonBlock();
-        }
+   
     }
 
     //衝突判定処理
