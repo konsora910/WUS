@@ -122,10 +122,8 @@ public class StarCnontroller : MonoBehaviour
                     {
                         this.rigid.AddForce(startDirection * distance * 2f);
 
-                        Debug.Log(speed);
                         this.rigid.constraints = RigidbodyConstraints2D.None;
                         this.bUse = true;
-                        //画面外で消す
                          _enabled = true;
                         this.bClick = false;
                         bDir = false;

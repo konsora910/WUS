@@ -58,19 +58,17 @@ public class StarSelect : MonoBehaviour
                 clickedGameObject = hit2d.transform.gameObject;
             }
 
-            Debug.Log(clickedGameObject);
         }
 
         for (int i = 0; i < allStar; i++)
         {
-            //  gameObjectArray[i].GetComponent<StarCnontroller>().enabled = false;
             if (gameObjectArray[i] == clickedGameObject)
             {
                 gameObjectArray[i].GetComponent<StarCnontroller>().bClick = true;
                 if (gameObjectArray[i].GetComponent<StarCnontroller>().bDir)
                 {
                     StarDir.SetActive(true);
-                    StarDir.transform.position = gameObjectArray[i].transform.position;//+new Vector3(-0.6f,1.0f,0f);
+                    StarDir.transform.position = gameObjectArray[i].transform.position;
 
                     StarDir.transform.rotation = Quaternion.Euler(0, 0, gameObjectArray[i].GetComponent<StarCnontroller>().angle + 90f);
                 }
