@@ -2846,7 +2846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &254190715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6750,7 +6750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 3, y: 2.5, z: -8}
+  m_LocalPosition: {x: 3.3, y: 2.5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6981,8 +6981,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bomb: {fileID: 8300000, guid: 2d26e853ac02a7446b4de9fc833447f6, type: 3}
-  particle: {fileID: 1391849641}
-  StarPos: {fileID: 580125339}
+  particle: {fileID: 2130534618}
+  StarPos: {fileID: 551510787}
 --- !u!82 &551510790
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7369,12 +7369,12 @@ PrefabInstance:
     - target: {fileID: 3297276889715095858, guid: 8e01462fe21146d4fadaa41dd24a9929,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -4.16
       objectReference: {fileID: 0}
     - target: {fileID: 3297276889715095858, guid: 8e01462fe21146d4fadaa41dd24a9929,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.53
+      value: -1.292
       objectReference: {fileID: 0}
     - target: {fileID: 3297276889715095858, guid: 8e01462fe21146d4fadaa41dd24a9929,
         type: 3}
@@ -8822,6 +8822,12 @@ Transform:
   m_Father: {fileID: 681723539}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &640446981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117072, guid: b8753ba549a46459eba7e6f806add77a,
+    type: 3}
+  m_PrefabInstance: {fileID: 966183744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &643173655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9b378e02ff1309746a3f340f54be0b18,
@@ -18154,8 +18160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bomb: {fileID: 8300000, guid: 2d26e853ac02a7446b4de9fc833447f6, type: 3}
-  particle: {fileID: 1391849641}
-  StarPos: {fileID: 580125339}
+  particle: {fileID: 640446981}
+  StarPos: {fileID: 1488517021}
 --- !u!82 &1488517024
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27350,3 +27356,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c963479882d28f34d819578942f4e180, type: 3}
+--- !u!1 &2130534618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117072, guid: b8753ba549a46459eba7e6f806add77a,
+    type: 3}
+  m_PrefabInstance: {fileID: 540096538}
+  m_PrefabAsset: {fileID: 0}
