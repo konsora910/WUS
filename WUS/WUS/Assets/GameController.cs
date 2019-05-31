@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour
     //        SceneManager.LoadScene("MenuScene");
     //    }
     //}
-    private IEnumerator MenuFadeOut()
+    public IEnumerator MenuFadeOut()
     {
         yield return new WaitForSeconds(1.0f);
         Fade.GetComponent<Fade>().FadeOut();
