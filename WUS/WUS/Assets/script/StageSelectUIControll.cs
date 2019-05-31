@@ -6,28 +6,7 @@ public class StageSelectUIControll : MonoBehaviour
 {
     public GameObject Tutrial;
     bool change = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-
-        //    Tutrial.SetActive(false);
-
-        //}
-
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-
-        //    Tutrial.SetActive(true);
-        //}
-    }
-    
     public void test(bool c)
     {
         change = c;

@@ -14,21 +14,16 @@ public class Sticking : MonoBehaviour
         collision,
         trigger
     };
-    // くっつくぜスコープ
     private FixedJoint2D fixedjoint;
 
-    // enumから星がトリガーを判断するかの判定用
     private readonly Mode mode;
-    // 刺さった判定
     public bool isSticking;
-    private readonly float breakForce = 1200.0f;// 設定した数値以上の力が加わると外れる
+    private readonly float breakForce = 1200.0f;
     private readonly float breakTorque = 1200.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        // コライダーから「トリガー」を取得できるか判断する
-        
             if (mode == Mode.collision)
             {
                 GetComponentInChildren<Collider2D>().isTrigger = false;
@@ -40,7 +35,6 @@ public class Sticking : MonoBehaviour
         
     }
 
-    // 衝突したと判断したら呼ばれる
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.collider.isTrigger)
@@ -52,7 +46,6 @@ public class Sticking : MonoBehaviour
         }
     }
 
-    // 接触していない判断
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.isTrigger)
@@ -64,7 +57,6 @@ public class Sticking : MonoBehaviour
         }
     }
 
-    // 壁かどうかの判断してジョイント設定をする
     void JudgeWall(Collider2D col)
     {
         
@@ -78,9 +70,9 @@ public class Sticking : MonoBehaviour
                     fixedjoint.breakForce = breakForce;
                     fixedjoint.breakTorque = breakTorque;
                     isSticking = true;
-                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;// 重力の影響をなくす
+                    GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-                    GetComponent<Rigidbody2D>().Sleep();// その場で動きが止まる
+                    GetComponent<Rigidbody2D>().Sleep();
                 
                 }
             }
@@ -88,10 +80,8 @@ public class Sticking : MonoBehaviour
             {
 
             }
-        
     }
 
-    // ジョイント機能から解除されたら呼ばれる
     private void OnJointBreak()
     {
         isSticking = false;

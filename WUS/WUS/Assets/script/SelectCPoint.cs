@@ -8,7 +8,8 @@ public class SelectCPoint : MonoBehaviour
     private GameObject[] checkPointArray = new GameObject[2];
     private int Points;
 
-    // 動的に変動可能変数群（カメラの移動距離）========
+    //=================================================
+    //  動的に変動可能変数群（カメラの移動距離）
     public float CPMoveNum1;
     public float CPMoveNum2;
     //=================================================
@@ -36,7 +37,7 @@ public class SelectCPoint : MonoBehaviour
     void Update()
     {
         switch (numCheck)
-        {   
+        {
             case 0:
                 checkPointArray[0].GetComponent<CheckPoint>().StmoveSet(CPMoveNum1);
                 break;

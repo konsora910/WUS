@@ -4,31 +4,16 @@ using UnityEngine;
 
 public class StarSelect : MonoBehaviour
 {
-    //星の総数
     public GameObject[] gameObjectArray = new GameObject[50];
-    //保存
     public GameObject[] gameObjectArray2 = new GameObject[50];
     public Vector3[] StarPosition = new Vector3[50];
     public Quaternion[] StarRotation = new Quaternion[50];
-
-
-    //public Transform[] StarTransform = new Transform[20];
-
     public int allStar;
-    //保存
     public int allStar2;
-
-    //クリックしたオブジェクト
     public GameObject clickedGameObject;
-
     public bool bSave = false;
 
-    //矢印
     GameObject StarDir;
-   // GameObject StarDirImg;
-    //RectTransform rect;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +23,6 @@ public class StarSelect : MonoBehaviour
         foreach (Transform child in transform)
         {
             gameObjectArray[count] = child.gameObject;
-            //gameObjectArray[count].GetComponent<StarCnontroller>().enabled = false;
-            //gameObjectArray[count].GetComponent<StarCnontroller>().bUse=false;
-
-
-            //     Debug.Log("Child[" + count + "]:" + child.name);
             count++;
         }
         allStar = count;
@@ -61,16 +41,7 @@ public class StarSelect : MonoBehaviour
             bSave = true;
 
         }
-
-
-        // gameObjectArray[1].GetComponent<StarCnontroller>().enabled = false;
-
         StarDir = GameObject.Find("StarDir");
-       // StarDirImg = GameObject.Find("DirImage");
-       // rect = StarDirImg.GetComponent<RectTransform>();
-
-
-
     }
 
     // Update is called once per frame
@@ -79,10 +50,6 @@ public class StarSelect : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-
-           // clickedGameObject = null;
-            
-
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
@@ -90,17 +57,6 @@ public class StarSelect : MonoBehaviour
             {
                 clickedGameObject = hit2d.transform.gameObject;
             }
-
-            /*
-            Vector2 tapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D collition2d = Physics2D.OverlapPoint(tapPoint);
-            if (collition2d)
-            {
-                clickedGameObject = collition2d.transform.gameObject;
-            }
-            */
-
-
 
             Debug.Log(clickedGameObject);
         }
@@ -115,16 +71,14 @@ public class StarSelect : MonoBehaviour
                 {
                     StarDir.SetActive(true);
                     StarDir.transform.position = gameObjectArray[i].transform.position;//+new Vector3(-0.6f,1.0f,0f);
-                    
-                    StarDir.transform.rotation = Quaternion.Euler(0, 0, gameObjectArray[i].GetComponent<StarCnontroller>().angle+90f); 
+
+                    StarDir.transform.rotation = Quaternion.Euler(0, 0, gameObjectArray[i].GetComponent<StarCnontroller>().angle + 90f);
                 }
                 else
                 {
                     StarDir.SetActive(false);
 
                 }
-                //clickedGameObject.GetComponent<StarCnontroller>().enabled = true;
-                //clickedGameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 if (gameObjectArray[i].GetComponent<StarCnontroller>().bUse)
                 {
 
@@ -132,36 +86,18 @@ public class StarSelect : MonoBehaviour
                     {
                         gameObjectArray[j] = gameObjectArray[j + 1];
 
-
                     }
 
                     allStar = allStar - 1;
                 }
-                //clickedGameObject = null;
-
-
-            }
-            else
-            {
-                //gameObjectArray[i].GetComponent<StarCnontroller>().enabled = false;
-                // gameObjectArray[i].GetComponent<StarCnontroller>().bUse = false;
-               // gameObjectArray[i].GetComponent<StarCnontroller>().bClick = false;
             }
         }
-        /*
-        if (Input.GetKey(KeyCode.Space))
-        {
-            SetStar();
-        }
-        */
 
-        if(clickedGameObject==null)
+        if (clickedGameObject == null)
         {
             StarDir.SetActive(false);
         }
     }
-
-
     public void SetStar()
     {
         for (int i = 0; i < allStar2; i++)
@@ -176,25 +112,19 @@ public class StarSelect : MonoBehaviour
             gameObjectArray[i].GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             gameObjectArray[i].GetComponent<StarCnontroller>().bUse = false;
             gameObjectArray[i].GetComponent<StarCnontroller>().bClick = false;
-            // gameObjectArray[i].GetComponent<Rigidbody2D>().WakeUp();
+
             Destroy(gameObjectArray[i].GetComponent<FixedJoint2D>());
             if (gameObjectArray[i].tag == "Star")
             {
                 gameObjectArray[i].GetComponent<Sticking>().isSticking = false;
             }
-
-
             clickedGameObject = null;
-
         }
         allStar = allStar2;
     }
-
     public void clicknull()
     {
         clickedGameObject = null;
     }
-
-
 
 }

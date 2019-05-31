@@ -11,8 +11,8 @@ using UnityEngine;
 
 public class ExplosionStar : MonoBehaviour
 {
-    bool m_bHit = false;                    //オブジェクトに当たったかどうか
-    public static float RADIUS = 0.03f;     //爆発の範囲変更はここの数値　元のサイズは0.01
+    bool m_bHit = false;                  
+    public static float RADIUS = 0.03f;    
 
     public AudioClip Bomb;
     public GameObject particle;
@@ -20,7 +20,6 @@ public class ExplosionStar : MonoBehaviour
     private ParticleSystem particle1;
     private AudioSource source;
  
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,22 +29,19 @@ public class ExplosionStar : MonoBehaviour
         m_bHit = false;
        
     }
-
     // Update is called once per frame
     void Update()
     {
         particle.gameObject.SetActive(false);
         if (m_bHit)
         {
-            StartCoroutine("DeleteObject");      //約1フレーム後にDeleteObjectを実行する
-            //source.PlayOneShot(Bomb);
-            //source.volume = 0.8f;
+            StartCoroutine("DeleteObject");     
+
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Bomb);
             GameObject.FindObjectOfType<AudioSource>().volume = 0.1f;
             
         }
     }
-
     void OnCollisionEnter2D(Collision2D col)
     {
         if (!col.collider.isTrigger)
@@ -58,7 +54,6 @@ public class ExplosionStar : MonoBehaviour
     }
         
     }
-
         private IEnumerator DeleteObject()
     {
         // コルーチンの処理  

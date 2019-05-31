@@ -8,7 +8,6 @@ public class ButtonControll : MonoBehaviour,IPointerEnterHandler,IPointerExitHan
     private RectTransform RectTra;
     public float RangeX = 0;
     public float RangeY = 0;
-
     private void Start()
     {
         RectTra = GetComponent<RectTransform>();

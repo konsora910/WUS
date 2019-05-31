@@ -30,12 +30,12 @@ public class GameController : MonoBehaviour
         ssui = GameObject.Find("StageSelectUI");
         SSUC = ssui.GetComponent<StageSelectUIControll>();
         PauseButton = GameObject.Find("Button (1)");
-       ResetButton = GameObject.Find("Button");
+        ResetButton = GameObject.Find("Button");
     }
     public void Quit()
     {
-      option.gameObject.SetActive(true);
-      Sceneobject.gameObject.SetActive(false);
+        option.gameObject.SetActive(true);
+        Sceneobject.gameObject.SetActive(false);
 
     }
     public void notQuit()
@@ -48,18 +48,14 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape)) Quit();
-        {
-            //UnityEditor.EditorApplication.isPlaying = false;
-        }
-        if(TitleFadeCheck == true)
+
+        if (TitleFadeCheck == true)
         {
             TitleFadeOut();
         }
 
         if (MenuFadeCheck == true)
         {
-            //      MenuFadeOut();
             StartCoroutine("MenuFadeOut");
         }
 
@@ -74,8 +70,8 @@ public class GameController : MonoBehaviour
     {
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
         TitleFadeCheck = true;
-            
-        
+
+
     }
 
     void TitleFadeOut()
@@ -89,17 +85,7 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("TitleScene");
         }
     }
-    //void MenuFadeOut()
-    //{
-    //    Fade.GetComponent<Fade>().FadeOut();
-    //    FadeTime++;
-    //    if (FadeTime > FadeTimeMax)
-    //    {
-    //        FadeTime = 0;
-    //        MenuFadeCheck = false;
-    //        SceneManager.LoadScene("MenuScene");
-    //    }
-    //}
+
     public IEnumerator MenuFadeOut()
     {
         yield return new WaitForSeconds(1.0f);
@@ -119,9 +105,7 @@ public class GameController : MonoBehaviour
     }
     public void GameFinish()
     {
-
         FinishFadeCheck = true;
-        
     }
 
     void FinishFadeOut()
@@ -132,13 +116,13 @@ public class GameController : MonoBehaviour
         {
             FadeTime = 0;
             FinishFadeCheck = false;
-            #if UNITY_EDITOR
-                        UnityEditor.EditorApplication.isPlaying = false;
-            #elif UNITY_WEBPLAYER
-                    		Application.OpenURL("http://www.yahoo.co.jp/");
-            #else
-                    		Application.Quit();
-            #endif
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBPLAYER
+            Application.OpenURL("http://www.yahoo.co.jp/");
+#else
+            Application.Quit();
+#endif
         }
 
     }
@@ -165,7 +149,6 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
         }
     }
-
     public void CallSlide()
     {
         SSUC.test(true);
