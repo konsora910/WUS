@@ -9,47 +9,34 @@ public class GameController : MonoBehaviour
 
     public AudioClip SelectSE;
     GameObject Fade;
+    GameObject ssui;
+    StageSelectUIControll SSUC;
     int FadeTimeMax = 60;
     int FadeTime = 0;
     bool TitleFadeCheck = false;
     bool MenuFadeCheck = false;
     bool TutorialFadeCheck = false;
     bool FinishFadeCheck = false;
-
-    GameObject PauseButton;
-   // UI_Pause PauseScript;
-    GameObject ResetButton;
     // Start is called before the first frame update
     void Start()
     {
         Fade = GameObject.Find("Fade");
         Fade.GetComponent<Fade>().FadeIn();
-
-        PauseButton = GameObject.Find("Button (1)");
-      //  PauseScript = ResetButton.GetComponent<UI_Pause>();
-        ResetButton = GameObject.Find("Button");
+        ssui = GameObject.Find("StageSelectUI");
+        SSUC = ssui.GetComponent<StageSelectUIControll>();
     }
-    public void Quit()
+    void Quit()
     {
       option.gameObject.SetActive(true);
       Sceneobject.gameObject.SetActive(false);
 
     }
-    public void notQuit()
-    {
-        option.gameObject.SetActive(false);
-        Sceneobject.gameObject.SetActive(true);
-
-    }
     // Update is called once per frame
     void Update()
     {
-       // if (Input.GetKey(KeyCode.Escape)) 
+        if (Input.GetKey(KeyCode.Escape)) Quit();
         {
             //UnityEditor.EditorApplication.isPlaying = false;
-          //  PauseScript.bPause = true;
-        //    Quit();
-           // ResetButton.SetActive(false);
         }
         if(TitleFadeCheck == true)
         {
@@ -58,7 +45,7 @@ public class GameController : MonoBehaviour
 
         if (MenuFadeCheck == true)
         {
-            StartCoroutine("MenuFadeOut");
+            MenuFadeOut();
         }
 
         if (FinishFadeCheck == true)
@@ -87,9 +74,8 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("TitleScene");
         }
     }
-    private IEnumerator MenuFadeOut()
+    void MenuFadeOut()
     {
-        yield return new WaitForSeconds(1.0f);
         Fade.GetComponent<Fade>().FadeOut();
         FadeTime++;
         if (FadeTime > FadeTimeMax)
@@ -152,5 +138,10 @@ public class GameController : MonoBehaviour
             TutorialFadeCheck = false;
             SceneManager.LoadScene("SampleScene");
         }
+    }
+
+    public void CallSlide()
+    {
+        SSUC.test(true);
     }
 }
