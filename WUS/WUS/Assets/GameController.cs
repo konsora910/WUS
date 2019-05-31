@@ -27,8 +27,6 @@ public class GameController : MonoBehaviour
     {
         Fade = GameObject.Find("Fade");
         Fade.GetComponent<Fade>().FadeIn();
-        ssui = GameObject.Find("StageSelectUI");
-        SSUC = ssui.GetComponent<StageSelectUIControll>();
         PauseButton = GameObject.Find("Button (1)");
         ResetButton = GameObject.Find("Button");
     }
@@ -151,6 +149,8 @@ public class GameController : MonoBehaviour
     }
     public void CallSlide()
     {
+        ssui = GameObject.Find("StageSelectUI");
+        SSUC = ssui.GetComponent<StageSelectUIControll>();
         SSUC.test(true);
     }
 }
