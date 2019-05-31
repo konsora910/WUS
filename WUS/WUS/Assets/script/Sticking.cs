@@ -20,7 +20,7 @@ public class Sticking : MonoBehaviour
     // enumから星がトリガーを判断するかの判定用
     private readonly Mode mode;
     // 刺さった判定
-    private bool isSticking;
+    public bool isSticking;
     private readonly float breakForce = 1200.0f;// 設定した数値以上の力が加わると外れる
     private readonly float breakTorque = 1200.0f;
 
