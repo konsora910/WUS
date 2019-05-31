@@ -59,7 +59,8 @@ public class GameController : MonoBehaviour
 
         if (MenuFadeCheck == true)
         {
-            MenuFadeOut();
+            //      MenuFadeOut();
+            StartCoroutine("MenuFadeOut");
         }
 
         if (FinishFadeCheck == true)
