@@ -13,6 +13,8 @@ public class UI_Pause : MonoBehaviour
     GameController script;
     GameObject ResetButton;
 
+    public bool bPause;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,30 +27,28 @@ public class UI_Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (PauseNum)
+        
+        if(!bPause)
         {
-            case 0:
-                image.sprite = Sprite1;
-                break;
-            case 1:
-                image.sprite = Sprite2;
-                break;
-            default:
-                break;
+            image.sprite = Sprite1;
+        }
+        else
+        {
+            image.sprite = Sprite2;
         }
     }
 
     public void PauseNumSet()
     {
-        if(PauseNum==0)
+        if(!bPause)
         {
-            PauseNum = 1;
+            bPause = true;
             script.Quit();
             ResetButton.SetActive(false);
         }
         else
         {
-            PauseNum = 0;
+            bPause = false;
             script.notQuit();
             ResetButton.SetActive(true);
         }
