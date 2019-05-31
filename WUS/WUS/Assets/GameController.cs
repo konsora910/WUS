@@ -17,6 +17,11 @@ public class GameController : MonoBehaviour
     bool MenuFadeCheck = false;
     bool TutorialFadeCheck = false;
     bool FinishFadeCheck = false;
+
+    GameObject PauseButton;
+    // UI_Pause PauseScript;
+    GameObject ResetButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,8 @@ public class GameController : MonoBehaviour
         Fade.GetComponent<Fade>().FadeIn();
         ssui = GameObject.Find("StageSelectUI");
         SSUC = ssui.GetComponent<StageSelectUIControll>();
+        PauseButton = GameObject.Find("Button (1)");
+       ResetButton = GameObject.Find("Button");
     }
     public void Quit()
     {
@@ -31,6 +38,13 @@ public class GameController : MonoBehaviour
       Sceneobject.gameObject.SetActive(false);
 
     }
+    public void notQuit()
+    {
+        option.gameObject.SetActive(false);
+        Sceneobject.gameObject.SetActive(true);
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -74,8 +88,20 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("TitleScene");
         }
     }
-    void MenuFadeOut()
+    //void MenuFadeOut()
+    //{
+    //    Fade.GetComponent<Fade>().FadeOut();
+    //    FadeTime++;
+    //    if (FadeTime > FadeTimeMax)
+    //    {
+    //        FadeTime = 0;
+    //        MenuFadeCheck = false;
+    //        SceneManager.LoadScene("MenuScene");
+    //    }
+    //}
+    private IEnumerator MenuFadeOut()
     {
+        yield return new WaitForSeconds(1.0f);
         Fade.GetComponent<Fade>().FadeOut();
         FadeTime++;
         if (FadeTime > FadeTimeMax)
@@ -85,7 +111,6 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("MenuScene");
         }
     }
-
     public void MenuScene()
     {
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
