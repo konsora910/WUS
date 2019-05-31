@@ -15,11 +15,19 @@ public class GameController : MonoBehaviour
     bool MenuFadeCheck = false;
     bool TutorialFadeCheck = false;
     bool FinishFadeCheck = false;
+
+    GameObject PauseButton;
+   // UI_Pause PauseScript;
+    GameObject ResetButton;
     // Start is called before the first frame update
     void Start()
     {
         Fade = GameObject.Find("Fade");
         Fade.GetComponent<Fade>().FadeIn();
+
+        PauseButton = GameObject.Find("Button (1)");
+      //  PauseScript = ResetButton.GetComponent<UI_Pause>();
+        ResetButton = GameObject.Find("Button");
     }
     public void Quit()
     {
@@ -36,9 +44,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape)) Quit();
+       // if (Input.GetKey(KeyCode.Escape)) 
         {
             //UnityEditor.EditorApplication.isPlaying = false;
+          //  PauseScript.bPause = true;
+        //    Quit();
+           // ResetButton.SetActive(false);
         }
         if(TitleFadeCheck == true)
         {
