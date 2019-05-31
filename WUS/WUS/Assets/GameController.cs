@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         ssui = GameObject.Find("StageSelectUI");
         SSUC = ssui.GetComponent<StageSelectUIControll>();
     }
-    void Quit()
+    public void Quit()
     {
       option.gameObject.SetActive(true);
       Sceneobject.gameObject.SetActive(false);
