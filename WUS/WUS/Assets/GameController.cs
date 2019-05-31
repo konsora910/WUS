@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
 
     public AudioClip SelectSE;
     GameObject Fade;
+    GameObject ssui;
+    StageSelectUIControll SSUC;
     int FadeTimeMax = 60;
     int FadeTime = 0;
     bool TitleFadeCheck = false;
@@ -20,6 +22,8 @@ public class GameController : MonoBehaviour
     {
         Fade = GameObject.Find("Fade");
         Fade.GetComponent<Fade>().FadeIn();
+        ssui = GameObject.Find("StageSelectUI");
+        SSUC = ssui.GetComponent<StageSelectUIControll>();
     }
     void Quit()
     {
@@ -134,5 +138,10 @@ public class GameController : MonoBehaviour
             TutorialFadeCheck = false;
             SceneManager.LoadScene("SampleScene");
         }
+    }
+
+    public void CallSlide()
+    {
+        SSUC.test(true);
     }
 }
