@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
 public class PageScroll : ScrollRect
 {
     private float PageWidth;
@@ -17,7 +16,6 @@ public class PageScroll : ScrollRect
 
         PageWidth = grid.cellSize.x + grid.spacing.x;
     }
-
     public override void OnBeginDrag(PointerEventData eventData)
     {
         base.OnBeginDrag(eventData);

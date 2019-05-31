@@ -20,15 +20,14 @@ public class UI_Pause : MonoBehaviour
     {
         GameContro = GameObject.Find("GameController");
         script = GameContro.GetComponent<GameController>();
-        ResetButton= GameObject.Find("Button"); 
+        ResetButton = GameObject.Find("Button");
     }
-
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(!bPause)
+
+        if (!bPause)
         {
             image.sprite = Sprite1;
         }
@@ -37,10 +36,9 @@ public class UI_Pause : MonoBehaviour
             image.sprite = Sprite2;
         }
     }
-
     public void PauseNumSet()
     {
-        if(!bPause)
+        if (!bPause)
         {
             bPause = true;
             script.Quit();

@@ -14,16 +14,12 @@ public class StarCnontroller : MonoBehaviour
     public AudioClip sound1;
     Rigidbody2D rigid;
     Vector2 startPos;
-    //現在のマウスの位置
     Vector2 currentPos;
-
-    //  private float speed;
 
     public Slider shotGauge;
     float speed = 0f;
     float gaugeLength = 0f;
     bool shotGaugeSet = false;
-
 
     public bool bUse = false;
     public bool bClick=false;
@@ -34,7 +30,6 @@ public class StarCnontroller : MonoBehaviour
     Renderer _renderer;
     public float angle;
 
-
     GameObject StarSel;
 
     StarSelect StarSelScript;
@@ -44,13 +39,10 @@ public class StarCnontroller : MonoBehaviour
     public float fScaleX;
     public float fScaleY;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         this.rigid = GetComponent<Rigidbody2D>();
-        // this.rigid.useGravity = false;
 
         _renderer = GetComponent<Renderer>();
 
@@ -72,9 +64,6 @@ public class StarCnontroller : MonoBehaviour
             bDir = false;
         }
         
-
-        
-
         if (!bUse)
         {
             // マウスを押した地点の座標を記録
@@ -82,7 +71,6 @@ public class StarCnontroller : MonoBehaviour
         {
             this.startPos = Input.mousePosition;
             shotGaugeSet = true;
-              //  Debug.Log(this.startPos);
             }
             
 
@@ -124,13 +112,6 @@ public class StarCnontroller : MonoBehaviour
                     Vector2 startDirection = -1 * (endPos - startPos).normalized;
                     audioSource.PlayOneShot(sound1);
 
-                    /*
-                    this.currentForce = endPos - startPos;
-                    if (this.currentForce.magnitude > MaxMagnitude * MaxMagnitude)
-                    {
-                        this.currentForce *= MaxMagnitude / this.currentForce.magnitude;
-                    }
-                    */
                     distance = Vector2.Distance(startPos, endPos);
                     if (distance > MaxDistance)
                     {
@@ -139,25 +120,16 @@ public class StarCnontroller : MonoBehaviour
 
                     if (distance > MinDistance)
                     {
-                        
-                        
-                        //this.rigid.AddForce(startDirection * speed);
                         this.rigid.AddForce(startDirection * distance * 2f);
 
-                     //   shotGaugeSet = false;
                         Debug.Log(speed);
-                        // this.rigid.useGravity = true;
                         this.rigid.constraints = RigidbodyConstraints2D.None;
                         this.bUse = true;
                         //画面外で消す
                          _enabled = true;
                         this.bClick = false;
                         bDir = false;
-                        // startPos = new Vector2(0f,0f);
-                        //endPos = new Vector2(0f, 0f);
                         distance = 0f;
-
-
 
                     }
                     else
@@ -174,14 +146,6 @@ public class StarCnontroller : MonoBehaviour
                 bDir = false;
             }
             
-
-            // マウスが押されている間 ショットゲージを呼ぶ
-            if (shotGaugeSet)
-            {
-               // shotGaugeValue();
-            }
-
-            // テスト用：スペースキー押下で停止
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 this.rigid.velocity *= 0;
@@ -195,7 +159,6 @@ public class StarCnontroller : MonoBehaviour
         if (_enabled && !_renderer.isVisible)
         {
             this.gameObject.SetActive(false);
-            //Destroy(this.gameObject);
         }
 
     }
@@ -205,27 +168,18 @@ public class StarCnontroller : MonoBehaviour
         this.rigid.velocity *= 0.995f;
     }
 
-    // ショットゲージ関数
     void shotGaugeValue()
     {
-        // Debug.Log("呼び出し確認");
-
         gaugeLength += 0.025f;
-        //ゲージがMaxでゼロに戻る
         if (gaugeLength > 1.025f)
         {
             gaugeLength = 0;
         }
 
-        //ゲージ長さをlengthに代入
         shotGauge.value = gaugeLength;
-        // スピードをゲージ値から計算
         speed = gaugeLength * 1000f + 500f;
 
     }
-
-
-
 
 }
 

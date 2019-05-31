@@ -22,7 +22,6 @@ public class Button_EffectPlay3 : MonoBehaviour {
 			Enemy.GetComponent<Animation>().Play();
 		}
 		if(Effect != null){
-		//	Effect.active = false;
 			Effect.active = true ;
 		}
 	} 

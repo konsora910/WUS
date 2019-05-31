@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // 変数
-    //  public float speed;
     public float rotation;
     public string type;
 
@@ -18,13 +16,11 @@ public class PlayerController : MonoBehaviour
     bool JumpCheck = false;
     int JumpTimeMax = 20;
     int JumpTime = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         this.rigid = GetComponent<Rigidbody>();
-        ///   PositionX = 0.006f;
-        ///   
-
     }
 
 
@@ -42,22 +38,15 @@ public class PlayerController : MonoBehaviour
 
 
         }
-        //   if (!bHit)
-        //   {
-        //       playerPrefab.transform.position -= new Vector3(PositionX, 0f, 0f);
-        //
-        //   }
         jump();
     }
 
-
-    // 衝突したと判断したら呼ばれる
     private void OnCollisionEnter2D(Collision2D collision)
     {
         bHit ^= false;
-        if (collision.gameObject.tag == "Star"&& !collision.collider.isTrigger )
+        if (collision.gameObject.tag == "Star" && !collision.collider.isTrigger)
         {
-            if (collision.gameObject.transform.position.y  < playerPrefab.transform.position.y - 0.5f)
+            if (collision.gameObject.transform.position.y < playerPrefab.transform.position.y - 0.5f)
             {
 
             }
@@ -68,7 +57,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
     void jump()
     {
         if (JumpCheck == true)
