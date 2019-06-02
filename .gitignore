@@ -39,3 +39,5 @@ WUS/WUS/Assets/GameObject/gimic.meta
 WUS/WUS/Assets/GameObject/gimic/taru/taru.prefab.meta
 WUS/WUS/Assets/GameObject/Stage/Start.meta
 WUS/WUS/Assets/GameObject/Stage/Gole.meta
+*.meta
+*.png
