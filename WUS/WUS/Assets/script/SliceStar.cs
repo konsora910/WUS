@@ -1,8 +1,8 @@
 ﻿//=========================================================
 //　      SliceStar
-//切る星につける
 //
-//特にいじるところはない
+//  概要
+//　切る星につける
 //=========================================================
 using System.Collections;
 using System.Collections.Generic;
@@ -19,19 +19,8 @@ public class SliceStar : MonoBehaviour
     {
         Audiosouce = GetComponent<AudioSource>();
     }
-
-    /*  // Update is called once per frame
-      void Update()
-      {
-
-      }
-      */
     void OnTriggerEnter2D(Collider2D col)
     {
-        //if (col.gameObject.tag == "Cut_Object" || col.gameObject.tag == "Star")
-        //{
-        //    GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
-        //}
         if (!col.isTrigger)
         {
             if (col.gameObject.tag == "Cut_Object")

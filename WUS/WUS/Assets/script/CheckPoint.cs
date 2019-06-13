@@ -1,18 +1,14 @@
-﻿using System;
+﻿//=========================================================
+//      
+//    チェックポイント単体の操作スクリプト
+//
+//=========================================================
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-/*===========================================================================
- 
-     
-     チェックポイント単体の操作スクリプト
-     
-     
-     
-     
-===========================================================================*/
 
 public class CheckPoint : MonoBehaviour
 {
@@ -21,31 +17,29 @@ public class CheckPoint : MonoBehaviour
         collision,
         trigger
     };
-    private readonly float tX = 0.5f;// カメラの移動速度
-    public float stMove = 0.0f;// 移動量保管変数
+    private readonly float tX = 0.5f;
     private readonly Mode mode;
-    
-
-    PlayerController PCont;
-    Respawn Rcnt;
     private bool StopCamera = false;
-    GameObject CallPlayer;
+    public float stMove = 0.0f;
     public AudioClip CPSE;
     public AudioSource AudioSource;
+    PlayerController PCont;
+    Respawn Rcnt;
+    GameObject CallPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         if (mode == Mode.collision)
         {
             GetComponentInChildren<Collider2D>().isTrigger = false;
-        } else if (mode == Mode.trigger)
+        }
+        else if (mode == Mode.trigger)
         {
             GetComponentInChildren<Collider2D>().isTrigger = true;
         }
         CallPlayer = GameObject.Find("player");
     }
-
-    // 常にかかる更新処理
     private void FixedUpdate()
     {
         if (StopCamera)
@@ -58,15 +52,13 @@ public class CheckPoint : MonoBehaviour
                 PCont.enabled = true;
                 Destroy(this.gameObject);
                 CallPlayer.GetComponent<Respawn>().NumResP();
-                
             }
-            //GetComponent<Respawn>().NumResP();
         }
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             JudgeCheck(collision.collider);
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(CPSE);
@@ -77,24 +69,19 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             JudgeCheck(collision);
         }
     }
-
-    // キャラクター判定処理
     void JudgeCheck(Collider2D colCheck)
     {
-        if(colCheck.gameObject.tag == "Player")
+        if (colCheck.gameObject.tag == "Player")
         {
-            // キャラクターの動きを止める
             PCont = colCheck.GetComponent<PlayerController>();
             PCont.enabled = false;
         }
     }
-
-    // 移動量のセット関数（譲渡先 : SelectCPoint.cs）
     public void StmoveSet(float move)
     {
         stMove = move;

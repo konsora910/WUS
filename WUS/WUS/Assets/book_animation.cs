@@ -12,14 +12,6 @@ public class book_animation : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-        }
-    }
     public void StartAnimation()
     {
         animator.SetTrigger("book_animation");

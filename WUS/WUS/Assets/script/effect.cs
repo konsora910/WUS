@@ -22,7 +22,6 @@ public class effect : MonoBehaviour
     {
         if (col.gameObject.tag == "Explosion_Star")
         {
-            //         audioSource.PlayOneShot(sound1);
             for(float i = 0f; i < 2.16f; i += 0.11f)
             {
                 particle.Play();
@@ -30,11 +29,10 @@ public class effect : MonoBehaviour
             }
             particle.Clear();
             this.gameObject.SetActive(false);
-            //         particle.Stop();
+           
         }
 
     }
-
     public void ResetObject()
     {
         particle.Clear();
