@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ScreenSizeLock : MonoBehaviour
 {
-    [RuntimeInitializeOnLoadMethod]
+/*    [RuntimeInitializeOnLoadMethod]
     static void OnRuntimeMethodLoad()
     {
         Screen.SetResolution(1980, 1080, false, 60);
 
-    }
+    }*/
 }
