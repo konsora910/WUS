@@ -16504,8 +16504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719c75a07692a90409a11db490c4c027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cut: {fileID: 8300000, guid: e9a67409b079708428ed9857b26268d6, type: 3}
-  NoCut: {fileID: 0}
+  Cut: {fileID: 0}
+  NoCut: {fileID: 8300000, guid: e9a67409b079708428ed9857b26268d6, type: 3}
 --- !u!82 &1521504065
 AudioSource:
   m_ObjectHideFlags: 0

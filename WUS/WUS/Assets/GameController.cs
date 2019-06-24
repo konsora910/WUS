@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     int FadeTime = 0;
     bool TitleFadeCheck = false;
     bool MenuFadeCheck = false;
-    bool TutorialFadeCheck = false;
+    private bool TutorialFadeCheck = false;
     bool FinishFadeCheck = false;
 
     GameObject PauseButton;

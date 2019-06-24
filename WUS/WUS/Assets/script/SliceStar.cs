@@ -26,6 +26,7 @@ public class SliceStar : MonoBehaviour
             if (col.gameObject.tag == "Cut_Object")
             {
                 GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
+                GameObject.FindObjectOfType<AudioSource>().volume = 0.8f;
             }
             else
             {

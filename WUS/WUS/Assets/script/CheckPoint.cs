@@ -62,7 +62,7 @@ public class CheckPoint : MonoBehaviour
         {
             JudgeCheck(collision.collider);
             GameObject.FindObjectOfType<AudioSource>().PlayOneShot(CPSE);
-            GameObject.FindObjectOfType<AudioSource>().volume = 0.5f;
+            GameObject.FindObjectOfType<AudioSource>().volume = 0.3f;
             StopCamera = true;
         }
     }

@@ -19,7 +19,7 @@ public class StarCnontroller : MonoBehaviour
     public Slider shotGauge;
     float speed = 0f;
     float gaugeLength = 0f;
-    bool shotGaugeSet = false;
+    private bool shotGaugeSet = false;
 
     public bool bUse = false;
     public bool bClick=false;
