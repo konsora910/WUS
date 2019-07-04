@@ -60,7 +60,7 @@ public class Sticking : MonoBehaviour
     void JudgeWall(Collider2D col)
     {
         
-            if (col.gameObject.tag == "Wall" || col.gameObject.tag == "Star"&&!col.isTrigger)
+            if (/*col.gameObject.tag == "Wall" ||*/ col.gameObject.tag == "Star"&&!col.isTrigger&&!this.GetComponent<Collider2D>().isTrigger)
             {
                 if (fixedjoint == null)
                 {
