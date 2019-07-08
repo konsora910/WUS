@@ -15,9 +15,9 @@ public class GameController : MonoBehaviour
     int FadeTime = 0;
     bool TitleFadeCheck = false;
     bool MenuFadeCheck = false;
-    private bool TutorialFadeCheck = false;
+    bool Stage1FadeCheck = false;
     bool FinishFadeCheck = false;
-
+    
     GameObject PauseButton;
     // UI_Pause PauseScript;
     GameObject ResetButton;
@@ -60,6 +60,10 @@ public class GameController : MonoBehaviour
         if (FinishFadeCheck == true)
         {
             FinishFadeOut();
+        }
+        if(Stage1FadeCheck == true)
+        {
+            StartCoroutine("Stage1FadeOut");
         }
 
     }
@@ -132,18 +136,29 @@ public class GameController : MonoBehaviour
     public void tutorial()
     {
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
-        DontDestroyOnLoad(SelectSE);
-        SceneManager.LoadScene("SampleScene");
+        Stage1FadeCheck = true;
     }
 
-    void TutorialFadeOut()
+  //  public void TutorialFadeOut()
+  //  {
+  //      Fade.GetComponent<Fade>().FadeOut();
+  //      FadeTime++;
+  //      if (FadeTime > FadeTimeMax)
+  //      {
+  //          FadeTime = 0;
+  //          TutorialFadeCheck = false;
+  //          SceneManager.LoadScene("SampleScene");
+  //      }
+  //  }
+    public IEnumerator Stage1FadeOut()
     {
+        yield return new WaitForSeconds(1.0f);
         Fade.GetComponent<Fade>().FadeOut();
         FadeTime++;
         if (FadeTime > FadeTimeMax)
         {
             FadeTime = 0;
-            TutorialFadeCheck = false;
+            MenuFadeCheck = false;
             SceneManager.LoadScene("SampleScene");
         }
     }
@@ -153,4 +168,8 @@ public class GameController : MonoBehaviour
         SSUC = ssui.GetComponent<StageSelectUIControll>();
         SSUC.test(true);
     }
+
+
+
+
 }
