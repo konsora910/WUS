@@ -23,9 +23,9 @@ public class ExplosionStar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
         particle1 = particle.GetComponent<ParticleSystem>();
         particle1.Stop();
+        source = GetComponent<AudioSource>();
         m_bHit = false;
        
     }
