@@ -15,9 +15,14 @@ public class GameController : MonoBehaviour
     int FadeTime = 0;
     bool TitleFadeCheck = false;
     bool MenuFadeCheck = false;
-    bool Stage1FadeCheck = false;
     bool FinishFadeCheck = false;
-    
+    bool Stage1FadeCheck = false;
+    bool Stage2FadeCheck = false;
+    bool Stage3FadeCheck = false;
+    bool Stage4FadeCheck = false;
+
+
+
     GameObject PauseButton;
     // UI_Pause PauseScript;
     GameObject ResetButton;
@@ -64,6 +69,18 @@ public class GameController : MonoBehaviour
         if(Stage1FadeCheck == true)
         {
             StartCoroutine("Stage1FadeOut");
+        }
+        if (Stage2FadeCheck == true)
+        {
+            StartCoroutine("Stage2FadeOut");
+        }
+        if (Stage3FadeCheck == true)
+        {
+            StartCoroutine("Stage3FadeOut");
+        }
+        if (Stage3FadeCheck == true)
+        {
+            StartCoroutine("Stage3FadeOut");
         }
 
     }
@@ -133,23 +150,38 @@ public class GameController : MonoBehaviour
         option.gameObject.SetActive(false);
         Sceneobject.gameObject.SetActive(true);
     }
-    public void tutorial()
+    public void Stage1()
     {
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
         Stage1FadeCheck = true;
     }
+    public void Stage2()
+    {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
+        Stage2FadeCheck = true;
+    }
+    public void Stage3()
+    {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
+        Stage3FadeCheck = true;
+    }
+    public void Stage4()
+    {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
+        Stage4FadeCheck = true;
+    }
 
-  //  public void TutorialFadeOut()
-  //  {
-  //      Fade.GetComponent<Fade>().FadeOut();
-  //      FadeTime++;
-  //      if (FadeTime > FadeTimeMax)
-  //      {
-  //          FadeTime = 0;
-  //          TutorialFadeCheck = false;
-  //          SceneManager.LoadScene("SampleScene");
-  //      }
-  //  }
+    //  public void TutorialFadeOut()
+    //  {
+    //      Fade.GetComponent<Fade>().FadeOut();
+    //      FadeTime++;
+    //      if (FadeTime > FadeTimeMax)
+    //      {
+    //          FadeTime = 0;
+    //          TutorialFadeCheck = false;
+    //          SceneManager.LoadScene("SampleScene");
+    //      }
+    //  }
     public IEnumerator Stage1FadeOut()
     {
         yield return new WaitForSeconds(1.0f);
@@ -160,6 +192,30 @@ public class GameController : MonoBehaviour
             FadeTime = 0;
             MenuFadeCheck = false;
             SceneManager.LoadScene("SampleScene");
+        }
+    }
+    public IEnumerator Stage2FadeOut()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Fade.GetComponent<Fade>().FadeOut();
+        FadeTime++;
+        if (FadeTime > FadeTimeMax)
+        {
+            FadeTime = 0;
+            MenuFadeCheck = false;
+            SceneManager.LoadScene("StageScene");
+        }
+    }
+    public IEnumerator Stage3FadeOut()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Fade.GetComponent<Fade>().FadeOut();
+        FadeTime++;
+        if (FadeTime > FadeTimeMax)
+        {
+            FadeTime = 0;
+            MenuFadeCheck = false;
+            SceneManager.LoadScene("stage5");
         }
     }
     public void CallSlide()
