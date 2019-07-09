@@ -15,7 +15,6 @@ TagManager:
   - checkpoint
   - Gimic
   - bridge
-  - block
   layers:
   - Default
   - TransparentFX

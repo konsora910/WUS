@@ -35,20 +35,20 @@ public class DropObject : MonoBehaviour
 
         if (CutObject == null)
         {
-            this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
- //           Rigidbody2D rd = GetComponent<Rigidbody2D>();
- //           rd.gravityScale = 1;
+           
+            Rigidbody2D rd = GetComponent<Rigidbody2D>();
+            rd.gravityScale = 1;
         }
         else
         {
-            this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-
-            //         this.transform.position = m_Position;
-            //         this.transform.rotation = m_Rotation;
+            this.transform.position = m_Position;
+            this.transform.rotation = m_Rotation;
         }
     }
     public void Resetobject()
     {
         this.gameObject.transform.position = m_Position;
+        Rigidbody2D rd = GetComponent<Rigidbody2D>();
+        rd.gravityScale = 0;
     }
 }
