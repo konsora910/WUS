@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 7bd793b475b40114497bae113fcb3d86
 PrefabImporter:
@@ -5,3 +6,12 @@ PrefabImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: c9476f7352381bb48b97b8fefcbd6a03
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> 星変更01

@@ -34,7 +34,7 @@ public class Sticking : MonoBehaviour
             }
         
     }
-
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.collider.isTrigger)
@@ -45,6 +45,7 @@ public class Sticking : MonoBehaviour
             }
         }
     }
+    */
 
     private void OnTriggerEnter2D(Collider2D col)
     {

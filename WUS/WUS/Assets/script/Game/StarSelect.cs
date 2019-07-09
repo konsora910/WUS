@@ -114,7 +114,7 @@ public class StarSelect : MonoBehaviour
             Destroy(gameObjectArray[i].GetComponent<FixedJoint2D>());
             if (gameObjectArray[i].tag == "Star")
             {
-                gameObjectArray[i].GetComponent<Sticking>().isSticking = false;
+               // gameObjectArray[i].GetComponent<Sticking>().isSticking = false;
             }
             clickedGameObject = null;
         }
