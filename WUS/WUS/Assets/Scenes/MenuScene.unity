@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1822,8 +1822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828f563918b60bf45a91fd26c222d3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite1: {fileID: 21300000, guid: 5ff7eb02b144f5d408f163d5eeae8405, type: 3}
-  sprite2: {fileID: 21300000, guid: e9c4b70297e983749b71b573c55ee3c2, type: 3}
+  sprite1: {fileID: 21300000, guid: a58bf54eed848ba4e9433e5ea0c2c1da, type: 3}
+  sprite2: {fileID: 21300000, guid: 56503caa1a7dfcb428b845e4beff2d5e, type: 3}
   stCont: {fileID: 1714971598}
 --- !u!114 &1340276205
 MonoBehaviour:
@@ -2956,7 +2956,7 @@ GameObject:
   - component: {fileID: 1938402205}
   - component: {fileID: 1938402204}
   m_Layer: 0
-  m_Name: Sample23
+  m_Name: BGM_smpe22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2972,7 +2972,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 74066f26b16f4e943be6c848088745fd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1b844253ae4ab724abd2bbe526cbed9e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.174
   m_Pitch: 1
