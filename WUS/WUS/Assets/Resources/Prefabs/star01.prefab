@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 4736781978318311975}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 3.1, y: 4.77, z: -0.1}
-  m_LocalScale: {x: 25, y: 25.000074, z: 25.000074}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4736781978318311975}
-  m_Mesh: {fileID: 4300000, guid: 178549c4a2145ac4d9cff8370326e0e0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e1d1f22ae22070c4a9f146bf305b8232, type: 3}
 --- !u!23 &4736781978316049639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d17e75de6a996324282fb7bc5c75d4cb, type: 2}
+  - {fileID: 2100000, guid: e1d1f22ae22070c4a9f146bf305b8232, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,9 +118,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000011580996, y: 0}
+  m_Offset: {x: 0.00078008574, y: 0}
   serializedVersion: 2
-  m_Radius: 0.01
+  m_Radius: 0.025595399
 --- !u!58 &4736781978318345406
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,9 +134,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000011431985, y: 0.0000000018044375}
+  m_Offset: {x: -0.00017762682, y: 0}
   serializedVersion: 2
-  m_Radius: 0.02
+  m_Radius: 0.04037253
 --- !u!82 &4736781978318345346
 AudioSource:
   m_ObjectHideFlags: 0
