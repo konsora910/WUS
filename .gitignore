@@ -1,4 +1,4 @@
-[Ll]ibrary/
+﻿[Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -79,6 +79,4 @@ WUS/WUS/Assets/GameObject/UI/リスタート/back.png.meta
 WUS/WUS/Assets/GameObject/gimic/bridge/bridge_block_L.fbx.meta
 WUS/WUS/Assets/script/gaid.cs
 WUS/WUS/Assets/script/gaid.cs.meta
-*.cs
-*.meta
 WUS/WUS/Assets/GameObject/UI/操作説明/操作.png
