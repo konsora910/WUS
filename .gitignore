@@ -82,3 +82,7 @@ WUS/WUS/Assets/script/gaid.cs.meta
 *.cs
 *.meta
 WUS/WUS/Assets/GameObject/UI/操作説明/操作.png
+WUS/WUS/UIElementsSchema/UnityEngine.Experimental.UIElements.xsd
+WUS/WUS/UIElementsSchema/UnityEditor.PackageManager.UI.xsd
+WUS/WUS/UIElementsSchema/UnityEditor.Experimental.UIElements.xsd
+WUS/WUS/UIElementsSchema/UIElements.xsd

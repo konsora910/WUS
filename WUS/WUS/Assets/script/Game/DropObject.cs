@@ -22,22 +22,23 @@ public class DropObject : MonoBehaviour
     void Start()
     {
         m_Name = this.gameObject.name;
-        int Lenge = m_Name.Length-1;
+        int Lenge = m_Name.Length - 1;
         m_num = m_Name.Substring(Lenge);
         m_Position = this.transform.position;
-        m_Rotation = this.transform.rotation;       
+        m_Rotation = this.transform.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject CutObject = GameObject.Find("CutObject" + m_num);     
+        GameObject CutObject = GameObject.Find("CutObject" + m_num);
 
         if (CutObject == null)
         {
             this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
- //           Rigidbody2D rd = GetComponent<Rigidbody2D>();
- //           rd.gravityScale = 1;
+            // Time.timeScale = 1.0f;
+            //           Rigidbody2D rd = GetComponent<Rigidbody2D>();
+            //           rd.gravityScale = 1;
         }
         else
         {
