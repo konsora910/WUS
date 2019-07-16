@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class UI_Pause : MonoBehaviour
 {
-    public Image image;
-    public Sprite Sprite1;
-    public Sprite Sprite2;
+  //  public Image image;
+  //  public Sprite Sprite1;
+  //  public Sprite Sprite2;
     int PauseNum;
     GameObject GameContro;
     GameController script;
@@ -27,14 +27,14 @@ public class UI_Pause : MonoBehaviour
     void Update()
     {
 
-        if (!bPause)
-        {
-            image.sprite = Sprite1;
-        }
-        else
-        {
-            image.sprite = Sprite2;
-        }
+     //   if (!bPause)
+     //   {
+     //       image.sprite = Sprite1;
+     //   }
+     //   else
+     //   {
+     //       image.sprite = Sprite2;
+     //   }
     }
     public void PauseNumSet()
     {
