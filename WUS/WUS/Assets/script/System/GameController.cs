@@ -218,6 +218,18 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("stage5");
         }
     }
+    public IEnumerator Stage4FadeOut()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Fade.GetComponent<Fade>().FadeOut();
+        FadeTime++;
+        if (FadeTime > FadeTimeMax)
+        {
+            FadeTime = 0;
+            MenuFadeCheck = false;
+            SceneManager.LoadScene("SampleScene1");
+        }
+    }
     public void CallSlide()
     {
         ssui = GameObject.Find("StageSelectUI");
