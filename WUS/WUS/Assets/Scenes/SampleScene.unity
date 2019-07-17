@@ -2756,6 +2756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b1df9e7634988445859290306d0ec1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
   bPause: 0
 --- !u!1 &269963091 stripped
 GameObject:
@@ -10169,6 +10170,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4066749677822869120, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 4066749677760935573, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10254,7 +10260,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
       value: ResetObject
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4066749678000965430, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066749677622550121, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1493555105}
+    - target: {fileID: 4066749677622550121, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TitleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066749679437138449, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1493555105}
+    - target: {fileID: 4066749679437138449, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Stage1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003398759229858669, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+        type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 1638633902}
+    m_RemovedComponents:
+    - {fileID: 2117874908701153822, guid: 0c37db5421d0f834ab0bdb4929a81e4f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c37db5421d0f834ab0bdb4929a81e4f, type: 3}
 --- !u!1001 &1222847146
 PrefabInstance:
@@ -13809,6 +13846,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7606216989910555198, guid: f19be25eb7fc4cf4bae94ea372b8e42f,
     type: 3}
   m_PrefabInstance: {fileID: 1901035559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1638633902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4066749677730309246, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1222468375}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1639634819 stripped
 Transform:
