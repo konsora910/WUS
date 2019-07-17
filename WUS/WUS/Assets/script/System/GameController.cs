@@ -78,9 +78,9 @@ public class GameController : MonoBehaviour
         {
             StartCoroutine("Stage3FadeOut");
         }
-        if (Stage3FadeCheck == true)
+        if (Stage4FadeCheck == true)
         {
-            StartCoroutine("Stage3FadeOut");
+            StartCoroutine("Stage4FadeOut");
         }
 
     }
@@ -227,7 +227,7 @@ public class GameController : MonoBehaviour
         {
             FadeTime = 0;
             MenuFadeCheck = false;
-            SceneManager.LoadScene("SampleScene1");
+            SceneManager.LoadScene("SampleScene 1");
         }
     }
     public void CallSlide()
