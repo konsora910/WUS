@@ -47,7 +47,7 @@ public class DropObject : MonoBehaviour
 
             if (CutObject == null)
             {
-                this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 //           Rigidbody2D rd = GetComponent<Rigidbody2D>();
                 //           rd.gravityScale = 1;
             }
