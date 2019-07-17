@@ -12835,7 +12835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441c09ac4fbe8d44cad01c2b3c174565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  option: {fileID: 1315289397}
+  option: {fileID: 2051334576}
   Sceneobject: {fileID: 160476788}
   SelectSE: {fileID: 8300000, guid: 966645eb2069d344e946ab0ab2a3c08d, type: 3}
 --- !u!4 &1493555106
@@ -17661,6 +17661,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2d80d3ae4fae0cd4f952bc9d2362eb38, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89890b6c560b63f4f8ff7d7a875102c4, type: 3}
+--- !u!1 &2051334576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4066749678889469877, guid: 0c37db5421d0f834ab0bdb4929a81e4f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1222468375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2052795989
 PrefabInstance:
   m_ObjectHideFlags: 0
