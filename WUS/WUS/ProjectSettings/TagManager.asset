@@ -16,6 +16,7 @@ TagManager:
   - Gimic
   - bridge
   - block
+  - BreakBlock
   layers:
   - Default
   - TransparentFX

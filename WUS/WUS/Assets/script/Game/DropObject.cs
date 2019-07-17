@@ -18,37 +18,66 @@ public class DropObject : MonoBehaviour
     string m_Name;
     Vector3 m_Position;
     Quaternion m_Rotation;
+    public static int MAX_DROPOBJECT = 15;
+    public GameObject[] m_DropObject = new GameObject[MAX_DROPOBJECT];
+    bool m_bReset = false;
     // Start is called before the first frame update
     void Start()
     {
-        m_Name = this.gameObject.name;
-        int Lenge = m_Name.Length-1;
-        m_num = m_Name.Substring(Lenge);
-        m_Position = this.transform.position;
-        m_Rotation = this.transform.rotation;       
+        if (this.gameObject.tag == "Drop_Object")
+        {
+            m_Name = this.gameObject.name;
+            int Lenge = m_Name.Length - 1;
+            m_num = m_Name.Substring(Lenge);
+            m_Position = this.transform.position;
+            m_Rotation = this.transform.rotation;
+        }
+        else
+        {
+            m_DropObject = GameObject.FindGameObjectsWithTag("Drop_Object");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject CutObject = GameObject.Find("CutObject" + m_num);     
-
-        if (CutObject == null)
+        if (this.gameObject.tag == "Drop_Object")
         {
-            this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
- //           Rigidbody2D rd = GetComponent<Rigidbody2D>();
- //           rd.gravityScale = 1;
-        }
-        else
-        {
-            this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            GameObject CutObject = GameObject.Find("CutObject" + m_num);
 
-            //         this.transform.position = m_Position;
-            //         this.transform.rotation = m_Rotation;
+            if (CutObject == null)
+            {
+                this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                //           Rigidbody2D rd = GetComponent<Rigidbody2D>();
+                //           rd.gravityScale = 1;
+            }
+            else
+            {
+                this.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+
+                //         this.transform.position = m_Position;
+                //         this.transform.rotation = m_Rotation;
+            }
+
+            if (m_bReset == true)
+            {
+                this.gameObject.transform.position = m_Position;
+                m_bReset = false;
+            }
         }
     }
     public void Resetobject()
     {
-        this.gameObject.transform.position = m_Position;
+        if (this.gameObject.tag != "Drop_Object")
+        {
+            int i = 0;
+            for (i = 0; i < m_DropObject.Length; i++)
+            {
+                if (m_DropObject[i] != null)
+                {
+                    m_DropObject[i].GetComponent<DropObject>().m_bReset = true;
+                }
+            }
+        } 
     }
 }

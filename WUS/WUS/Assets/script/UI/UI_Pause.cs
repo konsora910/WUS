@@ -12,7 +12,7 @@ public class UI_Pause : MonoBehaviour
     GameObject GameContro;
     GameController script;
     GameObject ResetButton;
-
+    public GameObject Timer;
     public bool bPause;
 
     // Start is called before the first frame update
@@ -43,11 +43,13 @@ public class UI_Pause : MonoBehaviour
             bPause = true;
             script.Quit();
             ResetButton.SetActive(false);
+            Timer.SetActive(false);
         }
         else
         {
             bPause = false;
             script.notQuit();
+            Timer.SetActive(true);
             ResetButton.SetActive(true);
         }
     }
