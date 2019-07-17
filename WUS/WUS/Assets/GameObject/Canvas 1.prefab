@@ -464,7 +464,7 @@ RectTransform:
   m_GameObject: {fileID: 4066749677622550119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066749678889469878}
   m_RootOrder: 1
@@ -472,7 +472,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -5.2, y: -200}
-  m_SizeDelta: {x: 495.3, y: 350}
+  m_SizeDelta: {x: 430.9, y: 141.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4066749677622550123
 CanvasRenderer:
@@ -502,7 +502,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 02a84541e8621fb45a3a126d1dbb728c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40f628c77a3911048a0497c20aceed8e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RangeX: 495.3
-  RangeY: 350
+  RangeX: 430.9
+  RangeY: 141.7
 --- !u!1 &4066749677730309246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,15 +1812,15 @@ RectTransform:
   m_GameObject: {fileID: 4066749679437138447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066749678889469878}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 100}
-  m_SizeDelta: {x: 495.3, y: 350}
+  m_AnchoredPosition: {x: -6, y: 35}
+  m_SizeDelta: {x: 306.4, y: 108.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4066749679437138450
 CanvasRenderer:
@@ -1850,7 +1850,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 45e013db9b33f1a4abaaa3bcfc980d6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5079e5af87abb440acc0d66cf9d09ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1924,8 +1924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e023588042aeb0445b01829f3051038a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RangeX: 495.3
-  RangeY: 350
+  RangeX: 306.4
+  RangeY: 108.5
 --- !u!1 &5990098057054247371
 GameObject:
   m_ObjectHideFlags: 0
