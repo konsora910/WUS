@@ -61,6 +61,7 @@ public class DropObject : MonoBehaviour
 
             if (m_bReset == true)
             {
+                this.gameObject.transform.rotation = m_Rotation;
                 this.gameObject.transform.position = m_Position;
                 m_bReset = false;
             }
