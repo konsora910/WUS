@@ -175,8 +175,7 @@ public class GameController : MonoBehaviour
     }
     public static void TimeOver()
     {
-
-        TimeOverFadeCheck = true;
+         TimeOverFadeCheck = true;
     }
 
     //  public void TutorialFadeOut()
@@ -250,8 +249,7 @@ public class GameController : MonoBehaviour
         if (FadeTime > FadeTimeMax)
         {
             FadeTime = 0;
-            MenuFadeCheck = false;
-            StageCheck.NowStage4();
+            TimeOverFadeCheck = false;
             SceneManager.LoadScene("TimeOver");
         }
     }
