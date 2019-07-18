@@ -49,4 +49,5 @@ public class StageCheck : MonoBehaviour
     {
         NowStage = 4;
     }
+
 }

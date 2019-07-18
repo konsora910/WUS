@@ -287,19 +287,19 @@ public class GameController : MonoBehaviour
     {
         if(StageCheck.StageClearCheck ==1)
         {
-            Stage1();
+            Stage2();
         }
         if (StageCheck.StageClearCheck == 2)
         {
-            Stage2();
+            Stage3();
         }
         if (StageCheck.StageClearCheck == 3)
         {
-            Stage3();
+            Stage4();
         }
         if (StageCheck.StageClearCheck == 4)
         {
-            Stage4();
+            MenuScene();
         }
     }
 
