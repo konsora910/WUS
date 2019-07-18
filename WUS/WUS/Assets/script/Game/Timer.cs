@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] public GameObject TenPlace;
@@ -24,7 +25,7 @@ public class Timer : MonoBehaviour
         if (TenSeconds <= 0 && FirstSeconds <=0)
         {
             //ここにゲームオーバー処理
-
+            SceneManager.LoadScene("TimeOver");
         }
         else
         {

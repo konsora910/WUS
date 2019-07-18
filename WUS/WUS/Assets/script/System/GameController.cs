@@ -6,7 +6,6 @@ public class GameController : MonoBehaviour
 {
     public GameObject option;
     public GameObject Sceneobject;
-
     public AudioClip SelectSE;
     GameObject Fade;
     GameObject ssui;
@@ -20,7 +19,7 @@ public class GameController : MonoBehaviour
     bool Stage2FadeCheck = false;
     bool Stage3FadeCheck = false;
     bool Stage4FadeCheck = false;
-
+    bool TimeOverFadeCheck = false;
 
 
     GameObject PauseButton;
@@ -83,6 +82,10 @@ public class GameController : MonoBehaviour
             StartCoroutine("Stage4FadeOut");
         }
 
+        if (TimeOverFadeCheck == true)
+        {
+            StartCoroutine("TimeOverFadeOut");
+        }
     }
 
     public void TitleScene()
@@ -170,6 +173,11 @@ public class GameController : MonoBehaviour
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
         Stage4FadeCheck = true;
     }
+    public void TimeOver()
+    {
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
+        TimeOverFadeCheck = true;
+    }
 
     //  public void TutorialFadeOut()
     //  {
@@ -191,6 +199,7 @@ public class GameController : MonoBehaviour
         {
             FadeTime = 0;
             MenuFadeCheck = false;
+            StageCheck.NowStage1();
             SceneManager.LoadScene("SampleScene");
         }
     }
@@ -203,6 +212,7 @@ public class GameController : MonoBehaviour
         {
             FadeTime = 0;
             MenuFadeCheck = false;
+            StageCheck.NowStage2();
             SceneManager.LoadScene("StageScene");
         }
     }
@@ -215,6 +225,7 @@ public class GameController : MonoBehaviour
         {
             FadeTime = 0;
             MenuFadeCheck = false;
+            StageCheck.NowStage3();
             SceneManager.LoadScene("stage5");
         }
     }
@@ -227,7 +238,21 @@ public class GameController : MonoBehaviour
         {
             FadeTime = 0;
             MenuFadeCheck = false;
+            StageCheck.NowStage4();
             SceneManager.LoadScene("SampleScene 1");
+        }
+    }
+    public IEnumerator TimeOverFadeOut()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Fade.GetComponent<Fade>().FadeOut();
+        FadeTime++;
+        if (FadeTime > FadeTimeMax)
+        {
+            FadeTime = 0;
+            MenuFadeCheck = false;
+            StageCheck.NowStage4();
+            SceneManager.LoadScene("TimeOver");
         }
     }
     public void CallSlide()
@@ -238,6 +263,45 @@ public class GameController : MonoBehaviour
     }
 
 
+    public void Restart()
+    {
+        if(StageCheck.NowStage == 1)
+        {
+            Stage1();
+        }
+        if (StageCheck.NowStage == 2)
+        {
+            Stage2();
+        }
+        if (StageCheck.NowStage == 3)
+        {
+            Stage3();
+        }
+        if (StageCheck.NowStage == 4)
+        {
+            Stage4();
+        }
+    }
+
+    public void ClearRestart()
+    {
+        if(StageCheck.StageClearCheck ==1)
+        {
+            Stage1();
+        }
+        if (StageCheck.StageClearCheck == 2)
+        {
+            Stage2();
+        }
+        if (StageCheck.StageClearCheck == 3)
+        {
+            Stage3();
+        }
+        if (StageCheck.StageClearCheck == 4)
+        {
+            Stage4();
+        }
+    }
 
 
 }
