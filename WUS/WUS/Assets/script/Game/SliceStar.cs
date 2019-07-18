@@ -23,15 +23,15 @@ public class SliceStar : MonoBehaviour
     {
         if (!col.isTrigger)
         {
+            this.gameObject.SetActive(false);
+            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(NoCut);
+        }
+        else
+        {
             if (col.gameObject.tag == "Cut_Object")
             {
                 GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Cut);
                 GameObject.FindObjectOfType<AudioSource>().volume = 0.8f;
-            }
-            else
-            {
-                this.gameObject.SetActive(false);
-                GameObject.FindObjectOfType<AudioSource>().PlayOneShot(NoCut);
             }
         }
     }

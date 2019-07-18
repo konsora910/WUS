@@ -24,19 +24,19 @@ public class Goal_Judge : MonoBehaviour
     {
         if (StageCheck.NowStage == 1)
         {
-            StageCheck.NowStage1();
+            StageCheck.ClearStage1();
         }
         if (StageCheck.NowStage == 2)
         {
-            StageCheck.NowStage2();
+            StageCheck.ClearStage2();
         }
         if (StageCheck.NowStage == 3)
         {
-            StageCheck.NowStage3();
+            StageCheck.ClearStage3();
         }
         if (StageCheck.NowStage == 4)
         {
-            StageCheck.NowStage4();
+            StageCheck.ClearStage4();
         }
 
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(GoalSE);

@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     bool Stage2FadeCheck = false;
     bool Stage3FadeCheck = false;
     bool Stage4FadeCheck = false;
-    bool TimeOverFadeCheck = false;
+    static bool TimeOverFadeCheck = false;
 
 
     GameObject PauseButton;
@@ -173,10 +173,9 @@ public class GameController : MonoBehaviour
         GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
         Stage4FadeCheck = true;
     }
-    public void TimeOver()
+    public static void TimeOver()
     {
-        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(SelectSE);
-        TimeOverFadeCheck = true;
+         TimeOverFadeCheck = true;
     }
 
     //  public void TutorialFadeOut()
@@ -250,8 +249,7 @@ public class GameController : MonoBehaviour
         if (FadeTime > FadeTimeMax)
         {
             FadeTime = 0;
-            MenuFadeCheck = false;
-            StageCheck.NowStage4();
+            TimeOverFadeCheck = false;
             SceneManager.LoadScene("TimeOver");
         }
     }
@@ -287,19 +285,19 @@ public class GameController : MonoBehaviour
     {
         if(StageCheck.StageClearCheck ==1)
         {
-            Stage1();
+            Stage2();
         }
         if (StageCheck.StageClearCheck == 2)
         {
-            Stage2();
+            Stage3();
         }
         if (StageCheck.StageClearCheck == 3)
         {
-            Stage3();
+            Stage4();
         }
         if (StageCheck.StageClearCheck == 4)
         {
-            Stage4();
+            MenuScene();
         }
     }
 
