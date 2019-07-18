@@ -25,7 +25,8 @@ public class Timer : MonoBehaviour
         if (TenSeconds <= 0 && FirstSeconds <=0)
         {
             //ここにゲームオーバー処理
-            SceneManager.LoadScene("TimeOver");
+            GameController.TimeOver();
+            
         }
         else
         {
