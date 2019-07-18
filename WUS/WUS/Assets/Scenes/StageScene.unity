@@ -5055,7 +5055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 20.5, y: 2.5, z: -8}
+  m_LocalPosition: {x: 2.96, y: 2.5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6826,11 +6826,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4736781978318345346, guid: 16139671475be7f4bb362007a94d8655,
-        type: 3}
-      propertyPath: MinDistance
-      value: 1.8998561
-      objectReference: {fileID: 0}
     - target: {fileID: 3301524825703282337, guid: 16139671475be7f4bb362007a94d8655,
         type: 3}
       propertyPath: m_RootOrder
@@ -6840,6 +6835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736781978318345346, guid: 16139671475be7f4bb362007a94d8655,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1.8998561
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16139671475be7f4bb362007a94d8655, type: 3}
@@ -9889,11 +9889,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4736781978318345407, guid: 16139671475be7f4bb362007a94d8655,
-        type: 3}
-      propertyPath: m_Range
-      value: 2.948676
-      objectReference: {fileID: 0}
     - target: {fileID: 3301524825703282337, guid: 16139671475be7f4bb362007a94d8655,
         type: 3}
       propertyPath: m_RootOrder
@@ -9903,6 +9898,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736781978318345407, guid: 16139671475be7f4bb362007a94d8655,
+        type: 3}
+      propertyPath: m_Range
+      value: 2.948676
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16139671475be7f4bb362007a94d8655, type: 3}
@@ -11536,7 +11536,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d32ef7de519b1b445bd5e710e330ccd1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8268011508c2c6940bb8a6a4fd8b6d4f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.174
   m_Pitch: 1
